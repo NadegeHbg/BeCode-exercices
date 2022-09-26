@@ -75,13 +75,15 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  width: 100%;
+
 }
 
 /* Set core body defaults */
 body {
   font-family: var(--ffRoboto);
   text-rendering: optimizeSpeed;
-  line-height: 2.5rem;
+  line-height: 1.5rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -114,12 +116,13 @@ svg {
 }
 
 /* === UTILITY === */
+
 /* font */
 .ffStrict {
   font-family: var(--ffRoboto);
 }
 
-/* largeur texte */
+/* font weight */
 .fwThin {
   font-weight: var(--fwThin);
 }
@@ -140,7 +143,8 @@ svg {
   font-weight: var(--fwBold);
 }
 
-/* Taille de texte */
+/* font size */
+
 .fs80 {
   font-size: var(--fs80);
 }
@@ -165,7 +169,9 @@ svg {
   font-size: var(--fs300);
 }
 
-/* Valeurs texte */
+
+/* reusable text's values */
+
 .retourLigne {
   word-break: break-word;
 }
@@ -180,4 +186,151 @@ svg {
 
 .textDecoNone {
   text-decoration: none;
+}
+
+/* width */
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 60%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width35 {
+  width: 5%;
+}
+
+.width25 {
+  width: 15%;
+}
+
+/* margin */
+.marginSmall {
+  margin: .5rem;
+}
+
+.marginNormal {
+  margin: 1rem;
+}
+
+.marginLarge {
+  margin: 2rem;
+}
+
+.marginRightS {
+  margin-right: .5rem;
+}
+
+.marginRight {
+  margin-right: 2rem;
+}
+
+
+/* padding */
+.paddingSmall {
+  padding: .35rem;
+}
+
+.paddingNormal {
+  padding: .5rem;
+}
+
+.paddingLarge {
+  padding: 1rem;
+}
+
+.paddingRight {
+  padding-right: 2rem;
+}
+
+.padTop {
+  padding-top: 1rem;
+}
+
+/* borders */
+/* .borderTB {
+  border-top: 1px rgba(0, 0, 0, .5) solid;
+  padding-top: ;
+  padding-bottom: 2rem;
+} */
+
+/* === Blocs === */
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  opacity: .2;
+}
+
+.label {
+  display: block;
+  font-size: var(--fs100);
+  font-weight: var(--fwBold);
+}
+
+.btnSubmit {
+  background-color: white;
+  padding: .2rem;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+}
+
+.btnSubmit:hover {
+  cursor: pointer;
+  background-color: #e45d5d;
+  color: white;
+}
+
+/* === Composition === */
+
+/* Display Flex */
+.displayFlex {
+  display: flex;
+}
+
+.flexGrow {
+  flex: 1;
+}
+
+/* display direction */
+.displayColumn {
+  flex-direction: column;
+}
+
+.displayRow {
+  flex-direction: row;
+}
+
+/* aligenement */
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: end;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: flex-end;
 }

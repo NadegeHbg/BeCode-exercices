@@ -76,6 +76,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+
 }
 
 /* Set core body defaults */
@@ -143,6 +144,7 @@ svg {
 }
 
 /* font size */
+
 .fs80 {
   font-size: var(--fs80);
 }
@@ -167,7 +169,9 @@ svg {
   font-size: var(--fs300);
 }
 
+
 /* reusable text's values */
+
 .retourLigne {
   word-break: break-word;
 }

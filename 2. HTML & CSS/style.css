@@ -1,38 +1,38 @@
-:root{
-    
-    --clrCorail:#ff7f50;
-    --clrLightCorail:#fa8072;
-    --clrPastelRed:#e45d5d;
-    --clrdGreenCanard:#048b9a;
-    --clrTurquoise:#40e0d0;
-    --clrLightGreen:#a7dfd9;
-    --clrGrey:#4f5b66;
-    --clrBlue:#293e60;
-    --clrWhite: #FFFFFF; 
+:root {
 
-    /* --ffBody:;
+  --clrCorail: #ff7f50;
+  --clrLightCorail: #fa8072;
+  --clrPastelRed: #e45d5d;
+  --clrdGreenCanard: #048b9a;
+  --clrTurquoise: #40e0d0;
+  --clrLightGreen: #a7dfd9;
+  --clrGrey: #4f5b66;
+  --clrBlue: #293e60;
+  --clrWhite: #FFFFFF;
+
+  /* --ffBody:;
     --ffHeading:; */
 
-    --ffRoboto:'Roboto', sans-serif;
+  --ffRoboto: 'Roboto', sans-serif;
 
 
-    --fwThin: 100;
-    --fwLight: 300;
-    --fwRegular: 400;
-    --fwSemiBold: 500;
-    --fwBold: 700;
+  --fwThin: 100;
+  --fwLight: 300;
+  --fwRegular: 400;
+  --fwSemiBold: 500;
+  --fwBold: 700;
 
-    --fs80: 0.8rem;
-    --fs100: 1rem;
-    --fs150: 1.5rem;
-    --fs200: 2rem;
-    --fs250: 2.5rem;
-    --fs300: 3rem;
+  --fs80: 0.8rem;
+  --fs100: 1rem;
+  --fs150: 1.5rem;
+  --fs200: 2rem;
+  --fs250: 2.5rem;
+  --fs300: 3rem;
 
-    /* peut être utile en cas de media query => changement plus rapides */
-    --fsBody: var(--fs100);
-    --fsSubtitle: var(--fs150);
-    --fsTitle: var(--fs200);
+  /* peut être utile en cas de media query => changement plus rapides */
+  --fsBody: var(--fs100);
+  --fsSubtitle: var(--fs150);
+  --fsTitle: var(--fs200);
 
 }
 
@@ -61,7 +61,7 @@ ol[role='list'] {
 }
 
 /* remove style from button */
-button{
+button {
   border: none;
   padding: 0;
   margin: 0;
@@ -72,15 +72,16 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 /* Set core body defaults */
 body {
-    font-family:var(--ffRoboto);
-    text-rendering: optimizeSpeed;
-    line-height: 2.5rem;
+  font-family: var(--ffRoboto);
+  text-rendering: optimizeSpeed;
+  line-height: 2.5rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -99,9 +100,9 @@ svg {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -113,59 +114,70 @@ svg {
 }
 
 /* === UTILITY === */
-    /* font */
-.ffStrict{
-    font-family: var(--ffRoboto);
+/* font */
+.ffStrict {
+  font-family: var(--ffRoboto);
 }
 
-    /* largeur texte */
-.fwThin{
-    font-weight: var(--fwThin);
-}
-.fwLight{
-    font-weight: var(--fwLight);
-}
-.fwRegular{
-    font-weight: var(--fwRegular);
-}
-.fwSemiBold{
-    font-weight: var(--fwSemiBold);
-}
-.fwBold{
-    font-weight: var(--fwBold);
+/* largeur texte */
+.fwThin {
+  font-weight: var(--fwThin);
 }
 
-    /* Taille de texte */
-.fs80{
-    font-size: var(--fs80);
-}
-.fs100{
-    font-size: var(--fs100);
-}
-.fs150{
-    font-size: var(--fs150);
-}
-.fs200{
-    font-size: var(--fs200);
-}
-.fs250{
-    font-size: var(--fs250);
-}
-.fs300{
-    font-size: var(--fs300);
+.fwLight {
+  font-weight: var(--fwLight);
 }
 
-    /* Valeurs texte */
-.retourLigne{
-    word-break: break-word;
-  }
-.justifyText{
-    text-align: justify;
-  }
-.centerText{
-    text-align: center;
-  }
-.textDecoNone{
-    text-decoration: none;
-  }
+.fwRegular {
+  font-weight: var(--fwRegular);
+}
 
+.fwSemiBold {
+  font-weight: var(--fwSemiBold);
+}
+
+.fwBold {
+  font-weight: var(--fwBold);
+}
+
+/* Taille de texte */
+.fs80 {
+  font-size: var(--fs80);
+}
+
+.fs100 {
+  font-size: var(--fs100);
+}
+
+.fs150 {
+  font-size: var(--fs150);
+}
+
+.fs200 {
+  font-size: var(--fs200);
+}
+
+.fs250 {
+  font-size: var(--fs250);
+}
+
+.fs300 {
+  font-size: var(--fs300);
+}
+
+/* Valeurs texte */
+.retourLigne {
+  word-break: break-word;
+}
+
+.justifyText {
+  text-align: justify;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.textDecoNone {
+  text-decoration: none;
+}

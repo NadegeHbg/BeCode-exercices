@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="[ fwBold fs200 ]">Emergency Contact and Medical Information</h1>
+
+    <section class="[ borderB ]">
+        <form action="">
+            <h3>Name</h3>
+            <label class="[ underLabel ]" for="firstName">First</label>
+            <input class="[ answerBox ]" type="text" id="firstName" name="firstName">
+            <label class="[ underLabel ]" for="lastName">Last</label>
+            <input class="[ answerBox ]" type="text" id="lastName" name="lastName">
+            
+            <br>
+            
+            <label class="[ underLabel ]" for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="PreferNot">Prefer not to respond</option>
+            </select>
+            
+            <label class="[ underLabel ]" for="dateBirth">Date of Birth</label>
+            <input class="[ answerBox ]" type="date" id="dateBirth" name="dateBirth">
+        </form>
+    </section>
+    
+    <section class="[ borderB ]">
+        <h2>Emergency Contact</h2>
+        <form action="">
+            <h3>Name</h3>
+            <label class="[ underLabel ]" for="firstName">First</label>
+            <input class="[ answerBox ]" type="text" id="firstName" name="firstName">
+            <label class="[ underLabel ]" for="lastName">Last</label>
+            <input class="[ answerBox ]" type="text" id="lastName" name="lastName">
+
+            <label class="[ underLabel ]" for="relationship">Relationship</label>
+            <input class="[ answerBox ]" type="text" id="relationship">
+            
+            <h3><Address></Address></h3>
+            <label class="[ underLabel ]" for="address">Street Adress</label>
+            <input class="[ answerBox ]" type="text" id="address" name="address">
+            
+            <br>
+
+            <label class="[ underLabel ]" for="AddressLine2">Address Line 2</label>
+            <input class="[ answerBox ]" type="text" id="AddressLine2" name="AddressLine2">
+  
+            <div>
+                <label class="[ underLabel ]" for="City">City</label>
+                <input class="[ answerBox ]" type="text" id="City"  name="City">
+                <label class="[ underLabel ]" for="state">State / Province / Region</label>
+                <input class="[ answerBox ]" type="text" id="state" name="state">
+            </div>
+            <div>
+                <label class="[ underLabel ]" for="postCode">Postal / Zip Code</label>
+                <input class="[ answerBox ]" type="text" id="postCode" name="postCode">
+                <label class="[ underLabel ]" for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="belgium">Belgium</option>
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <label class="[ upperLabel ]" for="homePhone">Home Phone</label>
+            <input class="[ answerBox ]" type="tel" id="homePhone" name="homePhone" placeholder="### - ### - ###">
+            <label class="[ upperLabel ]" for="workPhone">Work Phone</label>
+            <input class="[ answerBox ]" type="tel" id="workPhone" name="workPhone" placeholder="### - ### - ###">
+        </form>
+    </section>
+
+    <section class="[ borderB ]">
+        <h2>Medical Information</h2>
+        <form action="">
+            <label class="[ upperLabel ]" for="hospital">Hospital</label>
+            <input class="[ answerBox ]" type="text" id="hospital" name="hospital">
+
+            <div>
+                <label class="[ upperLabel ]" for="insurance">Insurance</label>
+                <input class="[ answerBox ]" type="text" id="insurance"     name="insurance">
+                <label class="[ upperLabel ]" for="policyNumber">Policy     Number</label>
+                <input class="[ answerBox ]" type="text" id="policyNumber"  name="policyNumber">
+            </div>
+
+            <div>
+                <label class="[ upperLabel ]" for="physicianName">Physician's Name</label>
+                <input class="[ answerBox ]" type="text" id="physicianName" name="physicianName">
+                <label class="[ upperLabel ]" for="phone">Phone Number</label>
+                <input class="[ answerBox ]" type="tel" id="phone" name="phone" placeholder="### - ### - ###">
+            </div>
+
+            <label class="[ upperLabel ]" for="allergies">Allergies / Special Healt Considerations</label>
+            <textarea id="allergies" name="allergies" rows="10" cols="30"></textarea>
+        </form>
+    </section>
+</body>
+</html>

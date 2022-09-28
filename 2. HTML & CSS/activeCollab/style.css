@@ -1,0 +1,318 @@
+:root {
+
+    --clrDarkGrey: #3F4655;
+    --clrLightGrey: #E9EDF2;
+    --clrElectricBlue: #3F9BF8;
+    --clrWhite: #FFFFFF;
+    --clrBlack: #202528;
+
+    --ffMain: 'Helvetica', sans-serif;
+
+    /* --ffBody:;
+    --ffHeading:; */
+
+    --fwRegular: 400;
+    --fwSemiBold: 500;
+    --fwBold: 700;
+
+    /* li footer */
+    --fs80: 0.8rem;
+    /* p */
+    --fs100: 1rem;
+    /* h4 */
+    --fs130: 1.3rem;
+    /* h3 */
+    --fs150: 1.5rem;
+    /* h2 */
+    --fs200: 2rem;
+    /* h1 */
+    --ds250: 2.5rem;
+
+    /* peut être utile en cas de media query => changement plus rapides */
+    --fsBody: var(--fs100);
+    --fsSubtitle: var(--fs150);
+    --fsTitle: var(--fs200);
+
+}
+
+/* === Reset === */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* remove style from button */
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* === UTILITY === */
+
+/* +Fonts+ */
+.fs80 {
+    font-size: var(--fs80);
+}
+
+.fs100 {
+    font-size: var(--fs100);
+}
+
+.fs130 {
+    font-size: var(--fs130);
+}
+
+.fs150 {
+    font-size: var(--fs150);
+}
+
+.fs200 {
+    font-size: var(--fs200);
+}
+
+.fs250 {
+    font-size: var(--fs250);
+}
+
+/* +text color+ */
+
+.textWhite {
+    color: var(--clrWhite);
+}
+
+.textBlack {
+    color: var(--clrBlack);
+}
+
+/* Valeurs texte */
+.retourLigne {
+    word-break: break-word;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.textDecoNone {
+    text-decoration: none;
+}
+
+/* +background+ */
+
+.bgDGrey {
+    background-color: var(--clrDarkGrey);
+}
+
+.bgLGrey {
+    background-color: var(--clrLightGrey);
+}
+
+bgBlue {
+    background-color: var(--clrElectricBlue);
+}
+
+/* +margin+ */
+.marginSmall {
+    margin: .5rem;
+}
+
+.marginNormal {
+    margin: 1rem;
+}
+
+.marginLarge {
+    margin: 2rem;
+}
+
+/* +padding+ */
+.paddingSmall {
+    padding: .5rem;
+}
+
+.paddingNormal {
+    padding: 1rem;
+}
+
+.paddingLarge {
+    padding: 2rem;
+}
+
+/* === BLOCS === */
+
+/* === EXCEPTIONS === */
+
+/* === COMPOSITION === */
+
+/* +Flexbox+ */
+.displayFlex {
+    display: flex;
+    gap: 1rem;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.flexRow {
+    flex-direction: row;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyAround {
+    justify-content: space-around;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+/* +Grid+ */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 2fr 2fr 1.5fr 2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title title title"
+        "tools tools tools tools"
+        "tryFree tryFree tryFree tryFree"
+        "cloud cloud cloud cloud"
+        "users users users users"
+        "getStarted getStarted getStarted getStarted";
+}
+
+.title {
+    grid-area: title;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "task team time invoicing"
+        "task team time invoicing"
+        "task team time invoicing";
+    grid-area: tools;
+}
+
+.task {
+    grid-area: task;
+}
+
+.team {
+    grid-area: team;
+}
+
+.time {
+    grid-area: time;
+}
+
+.invoicing {
+    grid-area: invoicing;
+}
+
+.tryFree {
+    grid-area: tryFree;
+}
+
+.cloud {
+    grid-area: cloud;
+}
+
+.users {
+    grid-area: users;
+}
+
+.getStarted {
+    grid-area: getStarted;
+}

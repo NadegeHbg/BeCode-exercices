@@ -1,0 +1,409 @@
+:root {
+
+  --clrGrey: #eeeeee;
+  --clrBlue: #1e93cc;
+  --clrDarkBlue: #165882;
+  --clrYellow: #e99002;
+  --clrBlack: #222222;
+
+
+  /* --ffBody:;
+      --ffHeading:; */
+
+  --ffRoboto: 'Roboto', sans-serif;
+
+
+  --fwThin: 100;
+  --fwLight: 300;
+  --fwRegular: 400;
+  --fwSemiBold: 500;
+  --fwBold: 700;
+
+  --fs80: 0.8rem;
+  --fs100: 1rem;
+  --fs150: 1.5rem;
+  --fs200: 2rem;
+  --fs250: 2.5rem;
+  --fs300: 3rem;
+
+  /* peut être utile en cas de media query => changement plus rapides */
+  --fsBody: var(--fs100);
+  --fsSubtitle: var(--fs150);
+  --fsTitle: var(--fs200);
+}
+
+/* === RESET === */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* remove style from button */
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Set core body defaults */
+body {
+  font-family: var(--ffRoboto);
+  text-rendering: optimizeSpeed;
+  line-height: 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* === UTILITY === */
+
+/* font */
+.ffStrict {
+  font-family: var(--ffRoboto);
+}
+
+/* font weight */
+.fwThin {
+  font-weight: var(--fwThin);
+}
+
+.fwLight {
+  font-weight: var(--fwLight);
+}
+
+.fwRegular {
+  font-weight: var(--fwRegular);
+}
+
+.fwSemiBold {
+  font-weight: var(--fwSemiBold);
+}
+
+.fwBold {
+  font-weight: var(--fwBold);
+}
+
+/* font size */
+
+.fs80 {
+  font-size: var(--fs80);
+}
+
+.fs100 {
+  font-size: var(--fs100);
+}
+
+.fs150 {
+  font-size: var(--fs150);
+}
+
+.fs200 {
+  font-size: var(--fs200);
+}
+
+.fs250 {
+  font-size: var(--fs250);
+}
+
+.fs300 {
+  font-size: var(--fs300);
+}
+
+
+/* reusable text's values */
+
+.retourLigne {
+  word-break: break-word;
+}
+
+.justifyText {
+  text-align: justify;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.textDecoNone {
+  text-decoration: none;
+}
+
+/* width */
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width35 {
+  width: 5%;
+}
+
+.width25 {
+  width: 15%;
+}
+
+/* height */
+.height50 {
+  height: 50%;
+}
+
+
+/* margin */
+.marginSmall {
+  margin: .5rem;
+}
+
+.marginNormal {
+  margin: 1rem;
+}
+
+.marginLarge {
+  margin: 2rem;
+}
+
+.marginRightS {
+  margin-right: .5rem;
+}
+
+.marginRight {
+  margin-right: 2rem;
+}
+
+/* padding */
+.paddingSmall {
+  padding: .35rem;
+}
+
+.paddingNormal {
+  padding: .5rem;
+}
+
+.paddingLarge {
+  padding: 1rem;
+}
+
+.padTop {
+  padding-top: 1rem;
+}
+
+.padBot {
+  padding-bottom: 5rem;
+}
+
+.padSide {
+  padding-right: 15rem;
+  padding-left: 15rem;
+}
+
+/* Background */
+
+.bgBlack {
+  background-color: var(--clrBlack);
+}
+
+.bgBlue {
+  background-color: var(--clrBlue);
+  color: whitesmoke;
+}
+
+.bgDarkBlue {
+  background-color: var(--clrDarkBlue);
+}
+
+.bgYellow {
+  background-color: var(--clrYellow);
+  color: whitesmoke;
+  border: 2px whitesmoke solid;
+}
+
+.bgGrey {
+  background-color: var(--clrGrey);
+}
+
+.bgWhite {
+  background-color: white;
+  color: var(--clrBlack);
+}
+
+/* === BLOCS === */
+
+h2 {
+  font-size: var(--fs200);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding-left: .5rem;
+}
+
+.btn {
+  font-size: var(--fs150);
+  min-width: 250px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgba(22, 88, 130, .5);
+  cursor: pointer;
+}
+
+
+/* === EXCEPTIONS === */
+
+.endItem {
+  color: whitesmoke;
+  margin-left: auto;
+}
+
+/* === COMPOSITION === */
+
+.displayFlex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flexGrow {
+  flex-grow: 1;
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr min-content min-content .5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "getImg titre titre ."
+    "subtitle subtitle subtitle subtitle"
+    "arguments arguments arguments arguments"
+    "getMore getMore getMore getMore"
+    "sponsors sponsors sponsors sponsors"
+    "btns btns btns btns";
+}
+
+.titre {
+  grid-area: titre;
+}
+
+.getImg {
+  grid-area: getImg;
+}
+
+.subtitle {
+  grid-area: subtitle;
+}
+
+.getMore {
+  grid-area: getMore;
+}
+
+.sponsors {
+  grid-area: sponsors;
+}
+
+.btns {
+  grid-area: btns;
+}
+
+.arguments {
+  grid-area: arguments;
+}

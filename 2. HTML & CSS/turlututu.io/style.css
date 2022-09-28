@@ -254,8 +254,13 @@ svg {
 }
 
 .padSide {
-  padding-right: 15rem;
-  padding-left: 15rem;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.padSideL {
+  padding-right: 20%;
+  padding-left: 20%;
 }
 
 /* Background */
@@ -316,6 +321,88 @@ a {
 .btn:hover {
   background-color: rgba(22, 88, 130, .5);
   cursor: pointer;
+}
+
+.rondChat {
+  height: 60px;
+  aspect-ratio: 1;
+  background-color: var(--clrDarkBlue);
+  border-radius: 50%;
+  position: absolute;
+  right: 4%;
+  bottom: 5%;
+}
+
+.chat {
+  height: 50%;
+  aspect-ratio: 1;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.chat::before {
+  content: "";
+  display: block;
+  border: 1px red transparent;
+  border-bottom: 2px var(--clrDarkBlue) solid;
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chat::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  border-right: 8px solid whitesmoke;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.rondChatF {
+  height: 60px;
+  aspect-ratio: 1;
+  background-color: var(--clrDarkBlue);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -600px;
+  right: 60px;
+}
+
+.chatF {
+  height: 50%;
+  aspect-ratio: 1;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.chatF::before {
+  content: "";
+  display: block;
+  border: 1px red transparent;
+  border-bottom: 2px var(--clrDarkBlue) solid;
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chatF::after {
+  content: "";
+  display: block;
+  border-right: 8px solid whitesmoke;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
 }
 
 

@@ -12,134 +12,168 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <ul>
-                <li><img src="Img/logoAC.png" alt="logo active.collab"><a href="#">active.collab</a></li>
+    <header class="[ bgLGrey ] [ displayFlex justifyBetween paddingSmall ]">
+        <nav class="[ displayFlex ]">
+            <div class="[ displayFlex alignCenter gap0 ]">
+                <img src="Img/logoAC.png" alt="logo active.collab"><a href="#" class="[ fs150 ]">active.collab</a>
+            </div>
+            <ul class="[ displayFlex alignCenter ]">
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">More</a></li>
+                <li><a href="#" class="[ textMidGrey ]">More +</a></li>
             </ul>
-        </div>
-        <div>
-            <ul>
+        </nav>
+        <nav class="[ displayFlex ]">
+            <ul class="[ displayFlex alignCenter ]">
                 <li><a href="#">Help & Support</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Ressources</a></li>
             </ul>
-            <button>Try it Free</button>
-            <button>Sign In</button>
-        </div>
+            <div class="displayFlex alignCenter gap0">
+                <button class="[ bgBlue textWhite ]">Try it Free</button>
+                <button class="[ bgWhite ]">Sign In</button>
+            </div>
+
+        </nav>
     </header>
 
     <main>
-        <div class="container">
-            <div class="title">
-                <h1>Powerful, yet simple project management tool</h1>
-            </div>
+        <div class="[ container ]">
+            <section class="[ bgLGrey ] [ title displayFlex justifyCenter alignCenter ]">
+                <h1 class="[ fs250 ]">Powerful, yet simple project management tool</h1>
+            </section>
 
-            <div class="tools">
-                <div class="task">
+            <section class="[ textWhite centerText ] [ tools bgDGrey ]">
+                <div class="[ task displayFlex flexColumn justifyCenter alignCenter ]">
                     <img src="Img/taskManagementImg.png" alt="task management image">
-                    <h4>Task Management</h4>
+                    <h4 class="fs130">Task Management</h4>
                     <p>Stay organized with an advanced to-do list and track your project.</p>
                 </div>
-                <div class="team">
+
+                <div class="[ team displayFlex flexColumn justifyCenter alignCenter borderLeft ]">
                     <img src="Img/teamCollabImg.png" alt="team collaboration image">
-                    <h4>Team Collaboration</h4>
+                    <h4 class="fs130">Team Collaboration</h4>
                     <p>Efficiently work together with your team to deliver top-notch results.</p>
                 </div>
-                <div class="time">
+                <div class="[ time displayFlex flexColumn justifyCenter alignCenter borderLeft ]">
                     <img src="Img/timeTrackingImg.png" alt="time tracking image">
-                    <h4>Time Tracking</h4>
+                    <h4 class="fs130">Time Tracking</h4>
                     <p>Track every minute of your work and bill clients accordingly.</p>
                 </div>
-                <div class="invoicing">
+                <div class="[ invoicing displayFlex flexColumn justifyCenter alignCenter borderLeft ]">
                     <img src="Img/invocingImg.png" alt="invoicing image">
-                    <h4>Invoicing</h4>
+                    <h4 class="fs130">Invoicing</h4>
                     <p>Easily issue invoices for your work, save time, and get paid.</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="tryFree">
-                <p>Active Collab helps your team stay organized when you outgrow email. But it’s so much more than that
-                    — with plenty of neat add-ons, it’s a one-stop solution for all your business needs.</p>
-                <button>Try it free for 30 days!</button>
-                <p>No credit card required, unsubscribe at any time.</p>
+            <section class="[ centerText bgLGrey ] [ tryFree displayFlex flexColumn justifyCenter alignCenter ]">
+                <p class="[ fs150 paddingLarge marginLarge width50 ]">Active Collab helps your team stay organized when
+                    you
+                    outgrow email.
+                    But
+                    it’s so
+                    much more than that
+                    — with plenty of neat add-ons, it’s a one-stop solution for all your business needs.
+                </p>
+                <div class="[ paddingLarge ]">
+                    <button class="[ bgBlue textWhite ]">Try it free for 30 days!</button>
+                    <p class="[ fs80 paddingNormal ]">No credit card required, unsubscribe at any time.</p>
+                </div>
                 <img src="Img/screenAC.png" alt="">
-            </div>
+            </section>
 
-            <div class="cloud">
-                <h2>On our cloud or your server</h2>
-                <p>Active Collab runs in the cloud like most browser apps today, but you can also install it on your own
+            <section class="[ paddingLarge centerText ] [ cloud displayFlex flexColumn alignCenter justifyCenter ]">
+                <h2 class="[ fs200 ]">On our cloud or your server</h2>
+                <p class="[ fs150 width50 ]">Active Collab runs in the cloud like most browser apps today, but you can
+                    also
+                    install it on your own
                     server.
                 </p>
-                <div>
+                <div class="[ displayFlex justifyCenter paddingLarge ]">
                     <div><img src="Img/monthlyPlanImg.png" alt="image monthly Plans">
-                        <h3>Monthly Plan</h3>
-                        <p>In the cloud
+                        <h3 class="[ fs150 paddingSmall ]">Monthly Plan</h3>
+                        <p class="[ paddingNormal ]">In the cloud
                             <br>
                             No setup Required
                             <br>
                             Ready in 2minutes
                         </p>
-                        <button><a href="#">Plans & Pricing</a></button>
-                        <p>from $25 / month</p>
+                        <button class="[ bgBlue ]"><a class="[ textWhite ]" href="#">Plans & Pricing</a></button>
+                        <p class="[ fs80 italicText paddingNormal ]">from $25 / month</p>
                     </div>
-                    <div><img src="Img/selfHostedImg.png" alt="image self hosted">
-                        <h3>Self-Hosted</h3>
-                        <p>Installs on your own server
+                    <div class="[ borderLeft ]">
+                        <img src="Img/selfHostedImg.png" alt="image self hosted">
+                        <h3 class="[ fs150 paddingSmall ]">Self-Hosted</h3>
+                        <p class="[ paddingNormal ]">Installs on your own server
                             <br>
                             Unlimited team members
                             <br>
                             One year of support included
                         </p>
-                        <button><a href="#">Self-Hosted Pricing</a></button>
-                        <p>one time fee - from $999</p>
+                        <button class="[ bgBlue ]"><a class="[ textWhite ]" href="#">Self-Hosted Pricing</a></button>
+                        <p class="[ fs80 italicText paddingNormal ]">one time fee - from $999</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="users">
-                <h2>Who's using Active Collab?</h2>
-                <p>For more than 10 years, we've been trusted by over 200,000 people in companies ranging from small
+            <section class="[ bgLGrey centerText ] [ users displayFlex flexColumn alignCenter justifyCenter ]">
+                <h2 class="[ fs200 ]">Who's using Active Collab?</h2>
+                <p class="[ fs130 width50 ]">For more than 10 years, we've been trusted by over 200,000 people in
+                    companies
+                    ranging from small
                     business to Fortune 500 members, universities and government institutions.
                 </p>
-                <a href="#"><img src="Img/nasaImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/harvardImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/intelImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/ogyTrucImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/adobeImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/publicisImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/appleImg.png" alt="logo"></a>
-                <a href="#"><img src="Img/slackImg.png" alt="logo"></a>
-            </div>
-            <div class="getStarted">
-                <h2>Get started with Active Collab</h2>
-                <p>Enter your details to get a mont of Active Collab absolutely free, without any limitation</p>
-                <div>
-                    <label for="name">Your Name or Organisation</label>
-                    <input type="text" id="name" name="name" placeholder="Enter name or organization">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="name@organization.com">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="The longer, the stronger">
-                    <button>Start my free month!</button>
-                    <p>Hope you'll enjoy it!</p>
+                <div class="[ displayFlex ]">
+                    <a href="#"><img src="Img/nasaImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/harvardImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/intelImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/ogyTrucImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/adobeImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/publicisImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/appleImg.png" alt="logo"></a>
+                    <a href="#"><img src="Img/slackImg.png" alt="logo"></a>
                 </div>
-                <div>
+            </section>
+
+            <section class="[ centerText ] [ getStarted displayFlex flexColumn alignCenter justifyEvenly ]">
+                <h2 class="[ fs200 paddingLarge ]">Get started with Active Collab</h2>
+                <p class="[ fs130 width50 ]">Enter your details to get a mont of Active Collab absolutely free, without
+                    any
+                    limitation</p>
+                <div class="[ form paddingLarge ]">
+                    <div>
+                        <label for="name">Your Name or Organisation</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name or organization">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@organization.com">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="The longer, the stronger">
+                    </div>
+                    <div class="[ displayFlex flexColumn alignCenter ]">
+                        <button class="[ bgBlue textWhite ]">Start my free month!</button>
+                        <p>Hope you'll enjoy it!</p>
+                    </div>
+
+                </div>
+
+                <div class="[ paddingLarge textMidGrey ]">
                     <p>Your data is safe with us</p>
-                    <a href="#">Active Collab Security</a>
+                    <a class="[ textDecoUnder textMidGrey ]" href="#">Active Collab Security</a>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
-    <footer>
-        <div>
+    <footer class="[ bgDGrey paddingLarge fs80 ]">
+        <div class="[ displayFlex justifyEvenly ]">
             <div>
                 <ul>
-                    <li><a href="#">Product</a></li>
+                    <li class="textMidGrey">Product</li>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">All Features</a></li>
                     <li><a href="#">Pricing</a></li>
@@ -151,7 +185,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Alternative</a></li>
+                    <li class="textMidGrey">Alternative</li>
                     <li><a href="#">Best Project Management Tools Comparison</a></li>
                     <li><a href="#">Basecamp Alternative</a></li>
                     <li><a href="#">Trello Alternative</a></li>
@@ -164,7 +198,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Solution</a></li>
+                    <li class="textMidGrey">Solution</li>
                     <li><a href="#">Self-Hosted Projet Management</a></li>
                     <li><a href="#">Task Management</a></li>
                     <li><a href="#">Project Management</a></li>
@@ -177,7 +211,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">For teams</a></li>
+                    <li class="textMidGrey">For teams</li>
                     <li><a href="#">Marketing</a></li>
                     <li><a href="#">Designers</a></li>
                     <li><a href="#">Web Desing</a></li>
@@ -189,7 +223,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Company</a></li>
+                    <li class="textMidGrey">Company</li>
                     <li><a href="#">About & Contact</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -199,7 +233,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Ressources</a></li>
+                    <li class="textMidGrey">Ressources</li>
                     <li><a href="#">Project Management Guides</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Newsletter</a></li>
@@ -207,14 +241,14 @@
                 </ul>
             </div>
         </div>
-        <div>
-            <a href="#"><img src="" alt="facebook"></a>
-            <a href="#"><img src="" alt="twitter"></a>
-            <a href="#"><img src="" alt="instagram"></a>
-            <a href="#"><img src="" alt="linkedin"></a>
-            <a href="#"><img src="" alt="mket'chose"></a>
+        <div class="[ paddingLarge ] [ displayFlex justifyCenter ]">
+            <a href="#"><img src="Img/facebooklogo.png" alt="facebook"></a>
+            <a href="#"><img src="Img/twitterlogo.png" alt="twitter"></a>
+            <a href="#"><img src="Img/instalogo.png" alt="instagram"></a>
+            <a href="#"><img src="Img/linkedinlogo.png" alt="linkedin"></a>
+            <a href="#"><img src="Img/mlogo.png" alt="mket'chose"></a>
         </div>
-        <div>
+        <div class="[ centerText textMidGrey ]">
             <p>Happy Collaborating!</p>
             <p>© 2007-2017 Active Collab</p>
         </div>

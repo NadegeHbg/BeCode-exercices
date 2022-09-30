@@ -1,0 +1,99 @@
+/*
+============
+Opérateurs
+============
+*/
+
+// var a = 5;
+// var b = 10;
+// var c = a > b;
+// var d = a != b;
+
+// if (c) {
+//     console.log('Hourray')
+// }
+// else {
+//     console.log('Meh')
+// }
+
+// if (d) {
+//     console.log("C'est différent ;)")
+// }
+// else {
+//     console.log("nope")
+// }
+
+// var e = 10;
+// var f = 10;
+// var g = '10';
+// var aa = 5;
+
+// devrait retourner true
+// var h = e == f;
+// console.log(h);
+
+// devrait retourner true
+// var i = e == g;
+// console.log(i);
+
+// devrait retourner true
+// var j = e === f;
+// console.log(j);
+
+// devrait retourner false
+// var k = e === g;
+// console.log(k);
+
+// devrait retourner true
+// var l = e !== g;
+// console.log(l)
+
+// devrait retourner true
+// var m = e >= f && e > aa;
+// console.log(m);
+
+// devrait retourner false
+// var n = e >= f && e < aa;
+// console.log(n);
+
+// devrait retourner true
+// var o = e >= f || e < aa;
+// console.log(o)
+
+/* 
+========================
+Test if, else if, else
+========================
+*/
+
+// var note = prompt('Quel a été ta note ?')
+// if (note > 0 && note < 10) {
+//     alert('Aie confiance, crois en toi')
+// }
+// else if (note == 10) {
+//     alert('C\'est tout pile, attention à ne pas faire face...')
+// }
+// else if (note > 10 && note < 20) {
+//     alert('Je sais pas où tu en es exactement, mais tu passes')
+// }
+// else if (note == 20) {
+//     alert('Arrête de grimper, tu peux pas aller plus haut')
+// }
+// else {
+//     alert('Can you repeat please ?')
+// }
+
+/* 
+========================
+Test avec retour user
+========================
+*/
+
+var confirme = confirm('T\'es sûr de vouloir faire ça ? O.o');
+
+if (confirme == true) {
+    alert("Yessaï ! T'es un guedin")
+}
+else {
+    alert("Dommage, tu ne sais pas ce que tu rates ...")
+}

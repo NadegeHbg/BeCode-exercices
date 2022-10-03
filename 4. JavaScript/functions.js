@@ -73,5 +73,49 @@
 //   console.log("Nice it's been on the same number twice !")
 // }
 
-// 4 - day’s number
+// =======================================================================
+// 4. day’s number
 // Write an algorithm which given the number of a day returns its name.
+// =======================================================================
+
+// let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// let d = new Date();
+// let dayName = days[d.getDay()];
+// console.log(dayName)
+
+// =======================================================================
+// 5. Print WaveShaperNode
+// A print shop charges 0.12 € the ten first copy, 0.11 € the next 20 and 0.10 € from there. Write an algorithm which given a number of copies and calculates the price.
+// let numberOfPages = nombre aléatoire
+// if nombre <= 10 then x * 12cents
+// if nombre > 10 && <= 20 then 10x12 + x-10 * 11 
+// if nombre > 20 then 10*12 + 10*11 + x-20 * 10
+// =======================================================================
+
+// function getRandomIntInclusive(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min +1)) + min;
+// }
+
+// let numberOfPages = getRandomIntInclusive(1,250)
+// console.log(numberOfPages)
+
+// if (numberOfPages >= 1 && numberOfPages <= 10){
+//    let total = numberOfPages * 0.12;
+
+//   console.log(total) 
+// }
+// else if(numberOfPages > 10 && numberOfPages <= 20){
+//   let total = 10 * 0.12 + (numberOfPages - 10 )* 0.11;
+
+//   console.log(total)
+// }
+// else if(numberOfPages > 20){
+//   let total = 10 * 0.12 + 10 * 0.11 + (numberOfPages - 20) * 0.10;
+
+//   console.log(total)
+// }
+// else{
+//   console.log("Qu'est-ce que tu me veux ouesh? ")
+// }

@@ -48,8 +48,8 @@ Math.PI (formule statique javascript pour pi)
 1 heure = 60 minutes
 */
 
-var today = new Date();
-var time = today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds();
-var dateTime = time;
+// var today = new Date();
+// var time = today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds();
+// var dateTime = time;
 
-console.log(dateTime)
+// console.log(dateTime)

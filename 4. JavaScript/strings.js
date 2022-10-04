@@ -51,7 +51,7 @@ function removeWhiteSpace(text) {
     const arrayWithoutSpace = stringToArrey.filter(element => {
         return element !== '';
     })
-    // console.log(arrayWithoutSpace);
+    // console.log(arrayWithoutSpace);²²
 
     return arrayWithoutSpace.join(" ")
 }

@@ -97,13 +97,13 @@ function getRandomIntInclusive(min, max) {
 // Face to take into account
 let face = 3;
 // total of dice that matches
-let totalOfFace = 0;
+// let totalOfFace = 0;
 
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// function getRandomIntInclusive(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
 // let roll1 = getRandomIntInclusive(1, 6);
 // let roll2 = getRandomIntInclusive(1, 6);
@@ -126,15 +126,22 @@ function getRandomIntInclusive(min, max) {
 // console.log(totalOfFace)
 
 // == randomise number of roll ==
-let rolls = Math.floor(Math.random() * 10)
-console.log(`number of rolls : ${rolls}`);
+// let rolls = getRandomIntInclusive(1, 10)
+// console.log(`number of rolls : ${rolls}`);
 
-for (let roll = 0; roll <= rolls; roll++) {
-  let specificRoll = getRandomIntInclusive(1, 6)
-  console.log(`That's one roll: ${specificRoll}`)
-  if (specificRoll === face) {
-    totalOfFace = totalOfFace + 1;
-  }
-}
+// for (let roll = 0; roll < rolls; roll++) {
+//   let specificRoll = getRandomIntInclusive(1, 6)
+//   console.log(`That's one roll: ${specificRoll}`)
+//   if (specificRoll === face) {
+//     totalOfFace = totalOfFace + 1;
+//   }
+// }
 
-console.log(`that's the total : ${totalOfFace}`)
+// console.log(`that's the total : ${totalOfFace}`)
+
+// =======================================================================================
+// 4. perfect number 
+// Write an algorithm which verify if a given positive integer is a perfect number, meaning equal to the sum of his divisors (except himself).
+// =======================================================================================
+
+// Ceci est un abandon temporaire de la joueuse belge

@@ -1,10 +1,9 @@
-// let liste = ['OBS', 'streamdeck', 'animations', 'lioranboard']
-
 // ========================================================
 // 1. Print an Array
 // Write an algorithm which prints everything in an array
 // ========================================================
 
+// let liste = ['OBS', 'streamdeck', 'animations', 'lioranboard']
 // console.table(liste)
 
 // liste.forEach(function (item) {
@@ -56,8 +55,8 @@
 //         min = item
 //     }
 // })
-
 // console.log(min)
+
 // console.log(Math.min(...nombres))
 
 // =======================================================
@@ -70,7 +69,6 @@
 // find the minimum number
 // print the index of the number in the array
 
-// let min = (Math.min(...nombres))
 // let min = Math.min(...nombres)
 // let indexMin = nombres.indexOf(min)
 

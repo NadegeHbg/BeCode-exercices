@@ -1,0 +1,423 @@
+:root {
+    --clrDarkGrey: hsl(221, 15%, 29%);
+    --clrMidGrey: hsl(220, 10%, 75%);
+    --clrLightGrey: hsl(219, 17%, 88%);
+
+    /* --ffBody:;
+    --ffHeading:; */
+
+    --fwThin: 200;
+    --fwRegular: 300;
+    --fwSemiBold: 500;
+    --fwBold: 700;
+
+    --fs100: 1rem;
+    --fs150: 1.5rem;
+    --fs200: 2rem;
+    --fs250: 2.5rem;
+}
+
+/* === Reset === */
+
+/* Box sizing rule */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* remove style from button */
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Mali', cursive;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    color: aliceblue;
+
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* === COMPOSITION === */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". center . "
+        "small medium big"
+    ;
+}
+
+.small {
+    grid-area: small;
+}
+
+.medium {
+    grid-area: medium;
+}
+
+.big {
+    grid-area: big;
+}
+
+.center {
+    grid-area: center;
+}
+
+/* === MEDIA QUERIES */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 300px) {
+    body {
+        background-color: red;
+    }
+
+    main {
+        grid-template-columns: auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "center"
+            "small"
+            "medium"
+            "big"
+        ;
+    }
+
+    #small {
+        font-size: 1rem;
+        padding-bottom: .2rem;
+    }
+
+    #medium {
+        display: none;
+    }
+
+    #big {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+
+    main {
+        grid-template-columns: auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "center center center"
+            "small small medium"
+            "big big big"
+        ;
+    }
+
+    #small {
+        display: none;
+    }
+
+    #medium {
+        font-size: 2rem;
+        padding-bottom: .5rem;
+        text-align: center;
+    }
+
+    #big {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+
+    #small {
+        display: none;
+    }
+
+    #medium {
+        display: none;
+    }
+
+    #big {
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* @media only screen and (orientation: landscape) {
+    body {
+        background-color: lightblue;
+    }
+} */
+
+
+/* === UTILITY === */
+
+/* +background+ */
+
+.bgDGrey {
+    background-color: var(--clrDarkGrey);
+}
+
+/* +Fonts size+ */
+.fs100 {
+    font-size: var(--fs100);
+}
+
+.fs150 {
+    font-size: var(--fs150);
+}
+
+.fs200 {
+    font-size: var(--fs200);
+}
+
+.fs250 {
+    font-size: var(--fs250);
+}
+
+/* +Font weight+ */
+.fw100 {
+    font-weight: var(--fwThin);
+}
+
+.fw200 {
+    font-weight: var(--fwRegular);
+}
+
+.fw300 {
+    font-weight: var(--fwSemiBold);
+}
+
+.fw400 {
+    font-weight: var(--fwBold);
+}
+
+/* +text color+ */
+.textMidGrey {
+    color: var(--clrMidGrey);
+}
+
+.textLightGrey {
+    color: var(--clrLightGrey);
+}
+
+/* Valeurs texte */
+.retourLigne {
+    word-break: break-word;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.textDecoNone {
+    text-decoration: none;
+}
+
+.textDecoUnder {
+    text-decoration: underline;
+}
+
+/* width */
+.width100 {
+    width: 100%;
+}
+
+.width75 {
+    width: 75%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width25 {
+    width: 25%;
+}
+
+/* +margin+ */
+.marginSmall {
+    margin: .5rem;
+}
+
+.marginNormal {
+    margin: 1rem;
+}
+
+.marginLarge {
+    margin: 2rem;
+}
+
+.marginBotS {
+    margin-bottom: 1.5rem;
+}
+
+.marginBotN {
+    margin-bottom: 2rem;
+}
+
+/* +padding+ */
+.paddingSmall {
+    padding: .3rem;
+}
+
+.paddingNormal {
+    padding: 1rem;
+}
+
+.paddingLarge {
+    padding: 5rem;
+}
+
+.paddingTop {
+    padding-top: rem;
+}
+
+/* +positon+ */
+.absolute {
+    position: absolute;
+}
+
+/* +borders+ */
+.borderLeft {
+    border-left: 1px var(--clrBlack) solid;
+}
+
+
+/* === COMPOSITION === */
+
+.displayBlock {
+    display: block;
+}
+
+/* +Flexbox+ */
+.displayFlex {
+    display: flex;
+}
+
+.gap {
+    gap: 2rem;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+.alignEnd {
+    align-items: flex-end;
+}
+
+/*  === BLOCS === */
+
+h2 {
+    font-size: calc(3vw + 1.5rem);
+    padding: 1rem;
+}
+
+p {
+    font-size: calc(1vw + 1rem);
+    padding: 1rem;
+
+}

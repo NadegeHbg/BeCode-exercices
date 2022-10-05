@@ -4,5 +4,6 @@
 Here you'll find :
 * A first introduction to Markdown
 * Exercises about HTML and CSS 
+* Exercises done on responsivness
 * Exercises about variables and else (using JavaScript for now)
 * More to come

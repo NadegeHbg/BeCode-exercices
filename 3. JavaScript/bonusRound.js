@@ -97,15 +97,18 @@
 //                 //    -> depuis 0 et 1 calcule tous les chiffres de la suite jusqu'au nième 
 //                 // incrémente i++ => n = i-1 + i-2
 //             }
-//             console.log(suiteFibonacci)
+//             let result = suiteFibonacci.join(" - ")
+//             console.log(result)
 //             return rl.close();
 //         }
 //         else if (input > 0 && input <= 2) {
 //             if (input == 1) {
-//                 let first = suiteFibonacci.shift()
-//                 console.log(first)
+//                 suiteFibonacci.pop()
+//                 let result = suiteFibonacci.join(" - ")
+//                 console.log(result)
 //             } else {
-//                 console.log(suiteFibonacci)
+//                 let result = suiteFibonacci.join(" - ")
+//                 console.log(result)
 //             }
 //             return rl.close();
 //         }
@@ -122,32 +125,58 @@
 // Make an interactive program to manager your favorite pizza flavors. When launched it must display a menu of this style:
 // =================================
 
+const { type } = require('os');
 let readline = require('readline');
 let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-let flavors = []
+let flavors = ["Hawaii", "Barbecue"]
+let menu = ` 
+Hello! Welcome to the Pizza Flavors Manager.
+lease choose your actions:
+
+1 - List all the pizza flavors
+2 - Add a new pizza flavor
+3 - Remove a pizza flavor
+4 - Exit this program
+`
+
+console.log(menu)
 
 let menuChoice = function () {
-    rl.question('', function (choice) {
+    rl.question('Enter your action\'s number:', function (choice) {
         // no comprendo por que choice ne trigger pa les autres questions ... Vérifier readline si il y a un autre moyen de prompt ... Over for today
+        // console.log(typeof choice)
         switch (choice) {
             // list all the pizza flavors
-            case 1:
-                console.table(flavors)
-                menuChoice()
-            case 2:
-                rl.question('Add a new pizza flavor', function (input) { })
-                menuChoice()
-            case 3:
-                rl.question('How many numbers of Fibonacci do you want to know ?', function (input) { })
-                menuChoice()
-            case 4:
-
+            case "1":
+                console.table(flavors);
+                menuChoice();
+                break;
+            case "2":
+                rl.question('Add a new pizza flavor', function (input) {
+                    flavors.push(input)
+                    menuChoice();
+                })
+                break;
+            case "3":
+                rl.question('Enter the number of pizza flavor you want to remove', function (input) {
+                    console.log(typeof input)
+                    if (input > -1) { // only splice array when item is found
+                        console.log(typeof input)
+                        flavors.splice(input, 1); // 2nd parameter means remove one item only
+                    }
+                    menuChoice();
+                })
+                break;
+            case "4":
+                console.log("The programm will now exit. Thanks for your time ! ")
                 return rl.close();
             default:
+                console.log("I don't understand");
+                menuChoice();
                 break;
         }
     })

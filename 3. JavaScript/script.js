@@ -17,7 +17,7 @@
 // console.log(phraseA + ' ' + phraseB);
 // console.log(`Salut il faut faire un début : "${phraseA}" et une fin : "${phraseB}", tout ça pour les assembler`);
 
-/* 
+/*
 =========================================================================================================
 Write an algorithm which receives a price without VAT and returns the price with VAT with a rate of 21%.
 prix / 100 * 21 + prix -> prix + prix * 0.021 -> prix * 1.21
@@ -30,7 +30,7 @@ prix / 100 * 21 + prix -> prix + prix * 0.021 -> prix * 1.21
 
 // console.log(tva(5))
 
-/* 
+/*
 =========================================================================================================
 Write an algorithm which receives a price without VAT and returns the price with VAT with a rate of 21%.
 Math.PI (formule statique javascript pour pi)

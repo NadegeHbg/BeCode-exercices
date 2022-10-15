@@ -125,60 +125,97 @@
 // Make an interactive program to manager your favorite pizza flavors. When launched it must display a menu of this style:
 // =================================
 
-const { type } = require('os');
-let readline = require('readline');
-let rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const { type } = require('os');
+// let readline = require('readline');
+// let rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-let flavors = ["Hawaii", "Barbecue"]
-let menu = ` 
-Hello! Welcome to the Pizza Flavors Manager.
-lease choose your actions:
+// let flavors = ["Hawaii", "Barbecue"]
+// let menu = ` 
+// Hello! Welcome to the Pizza Flavors Manager.
+// lease choose your actions:
 
-1 - List all the pizza flavors
-2 - Add a new pizza flavor
-3 - Remove a pizza flavor
-4 - Exit this program
-`
+// 1 - List all the pizza flavors
+// 2 - Add a new pizza flavor
+// 3 - Remove a pizza flavor
+// 4 - Exit this program
+// `
 
-console.log(menu)
+// console.log(menu)
 
-let menuChoice = function () {
-    rl.question('Enter your action\'s number:', function (choice) {
-        // no comprendo por que choice ne trigger pa les autres questions ... Vérifier readline si il y a un autre moyen de prompt ... Over for today
-        // console.log(typeof choice)
-        switch (choice) {
-            // list all the pizza flavors
-            case "1":
-                console.table(flavors);
-                menuChoice();
-                break;
-            case "2":
-                rl.question('Add a new pizza flavor', function (input) {
-                    flavors.push(input)
-                    menuChoice();
-                })
-                break;
-            case "3":
-                rl.question('Enter the number of pizza flavor you want to remove', function (input) {
-                    console.log(typeof input)
-                    if (input > -1) { // only splice array when item is found
-                        console.log(typeof input)
-                        flavors.splice(input, 1); // 2nd parameter means remove one item only
-                    }
-                    menuChoice();
-                })
-                break;
-            case "4":
-                console.log("The programm will now exit. Thanks for your time ! ")
-                return rl.close();
-            default:
-                console.log("I don't understand");
-                menuChoice();
-                break;
+// let menuChoice = function () {
+//     rl.question('Enter your action\'s number:', function (choice) {
+//         // console.log(typeof choice)
+//         switch (choice) {
+//             // list all the pizza flavors
+//             case "1":
+//                 console.table(flavors);
+//                 menuChoice();
+//                 break;
+//             case "2":
+//                 rl.question('Add a new pizza flavor', function (input) {
+//                     flavors.push(input)
+//                     menuChoice();
+//                 })
+//                 break;
+//             case "3":
+//                 rl.question('Enter the number of pizza flavor you want to remove', function (input) {
+//                     console.log(typeof input)
+//                     if (input > -1) { // only splice array when item is found
+//                         console.log(typeof input)
+//                         flavors.splice(input, 1); // 2nd parameter means remove one item only
+//                     }
+//                     menuChoice();
+//                 })
+//                 break;
+//             case "4":
+//                 console.log("The programm will now exit. Thanks for your time ! ")
+//                 return rl.close();
+//             default:
+//                 console.log("I don't understand");
+//                 menuChoice();
+//                 break;
+//         }
+//     })
+// }
+// menuChoice()
+
+// =================================
+// Sort an array without sort() method
+// input = [2,4,1,3,9,294,5]
+
+// code to sort the array, without using sort()
+
+// output = [1,2,3,4,9,294]
+// =================================
+
+let array = [2, 4, 6, 1, 3, 9, 294, 5]
+
+console.log(array)
+
+let sortArray = function () {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
+            // Detect if smaller or bigger
+            // console.log("Je suis plus grand, je dois bouger")
+
+            // swap position if bigger
+            console.log("array avant changement" + array)
+
+            let temp = array[i]
+
+            array[i] = array[i + 1]
+
+            array[i + 1] = temp
+
+            console.log("valeurs interchangées" + array)
+            sortArray()
         }
-    })
+    }
+    return array
 }
-menuChoice()
+
+sortArray();
+console.log(array)

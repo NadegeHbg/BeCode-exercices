@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring the DOM</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>BeCode DOM exploration | <strong>Forms</strong></h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Display your firstname</h2>
+
+            <input type="text" name="firstname" id="firstname" />
+            <span id="display-firstname"></span>
+        </section>
+
+        <section>
+            <h2>Are you old enough to see this?</h2>
+
+            <input type="number" name="age" id="age" />
+            <section id="a-hard-truth" style="visibility: hidden;">
+                Being an adult is not fun, everybody would rather remain a child, especially when it's time to pay the
+                bills.
+            </section>
+        </section>
+
+        <section>
+            <h2>Password verifier</h2>
+
+            <p>Well you know the drill. Choose a password thats at least 6 characters long. And enter the same password
+                twice</p>
+
+            <div>
+                <input type="password" name="pwd" id="pwd" />
+            </div>
+
+            <div>
+                <input type="password" name="pwd-confirm" id="pwd-confirm" />
+            </div>
+        </section>
+
+        <section>
+            <h2>Mode selector</h2>
+
+            <select name="toggle-darkmode" id="toggle-darkmode">
+                <option value="dark">Dark Mode</option>
+                <option value="light" selected>Light Mode</option>
+            </select>
+        </section>
+    </main>
+
+    <footer>
+        At this point you should know that there is nothing interesting in this footer
+    </footer>
+</body>
+
+</html>

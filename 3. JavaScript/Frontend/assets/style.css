@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+header, footer{
+  position: fixed;
+  background-color: #000;
+  color: #fff;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  top: 0;
+  height: 80px;
+}
+
+footer{
+  bottom: 0;
+  height: 50px;
+}
+
+main{
+  max-width: 1200px;
+  margin: 150px auto;
+}

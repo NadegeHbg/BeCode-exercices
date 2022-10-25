@@ -14,8 +14,8 @@ const getElapsedTime = () => {
 }
 
 const clickOnSquare = (e) => {
-    console.log(e.target.classList[1]);
-    console.log(getElapsedTime());
+    // console.log(e.target.classList[1]);
+    // console.log(getElapsedTime());
 
     // create a new div
     const div = document.createElement("div");
@@ -98,3 +98,7 @@ document.addEventListener("keydown", (event) => {
 
 // Create a system so that when a user clicks on a generated square an alert pops-up 
 // with the color of that square
+
+
+
+// container.insertAdjacentHTML('beforeend', event.target.outerHTML)

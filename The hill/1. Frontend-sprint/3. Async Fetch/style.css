@@ -1,0 +1,502 @@
+:root {
+    --clr-Primary-100: hsl(215deg, 73%, 90%);
+    --clr-Primary-200: hsl(215deg, 73%, 70%);
+    --clr-Primary-300: hsl(215deg, 73%, 30%);
+    --clr-Primary-400: hsl(215deg, 73%, 20%);
+    --clr-Primary-500: hsl(215deg, 73%, 10%);
+    --clr-Secondary-100: hsl(16deg, 100%, 86%);
+    --clr-Secondary-200: hsl(16deg, 100%, 76%);
+    --clr-Secondary-300: hsl(16deg, 100%, 66%);
+    --clr-Secondary-400: hsl(20deg, 94%, 50%);
+    --clr-Secondary-500: hsl(16deg, 100%, 26%);
+    --clr-Neutral-100: hsl(0deg, 0%, 100%);
+    --clr-Neutral-200: hsl(0deg, 0%, 87%);
+    --clr-Neutral-300: hsl(0deg, 0%, 80%);
+    --clr-Neutral-400: hsl(0deg, 0%, 70%);
+    --clr-Neutral-500: hsl(0deg, 0%, 60%);
+    --clr-Neutral-600: hsl(0deg, 0%, 50%);
+    --clr-Neutral-700: hsl(0deg, 0%, 40%);
+    --clr-Neutral-800: hsl(0deg, 0%, 30%);
+    --clr-Neutral-900: hsl(0deg, 0%, 15%);
+    --fs-80: .8rem;
+    --fs-100: 1rem;
+    --fs-150: 1.563rem;
+    --fs-200: 1.953rem;
+    --fs-250: 2.441rem;
+    --fs-300: 3.052rem;
+}
+
+/* === Reset === */
+
+/* Box sizing rule */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* remove style from button */
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Mali', cursive;
+    background-color: var(--clr-Primary-500);
+    color: var(--clr-Neutral-100);
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* === UTILITY === */
+
+/* colors */
+.textPrimary100 {
+    color: var(--clr-Primary-100);
+}
+
+.bgPrimary100 {
+    background-color: var(--clr-Primary-100);
+}
+
+.textPrimary200 {
+    color: var(--clr-Primary-200);
+}
+
+.bgPrimary200 {
+    background-color: var(--clr-Primary-200);
+}
+
+.textPrimary300 {
+    color: var(--clr-Primary-300);
+}
+
+.bgPrimary300 {
+    background-color: var(--clr-Primary-300);
+}
+
+.textPrimary400 {
+    color: var(--clr-Primary-400);
+}
+
+.bgPrimary400 {
+    background-color: var(--clr-Primary-400);
+}
+
+.textPrimary500 {
+    color: var(--clr-Primary-500);
+}
+
+.bgPrimary500 {
+    background-color: var(--clr-Primary-500);
+}
+
+.textSecondary100 {
+    color: var(--clr-Secondary-100);
+}
+
+.bgSecondary100 {
+    background-color: var(--clr-Secondary-100);
+}
+
+.textSecondary200 {
+    color: var(--clr-Secondary-200);
+}
+
+.bgSecondary200 {
+    background-color: var(--clr-Secondary-200);
+}
+
+.textSecondary300 {
+    color: var(--clr-Secondary-300);
+}
+
+.bgSecondary300 {
+    background-color: var(--clr-Secondary-300);
+}
+
+.textSecondary400 {
+    color: var(--clr-Secondary-400);
+}
+
+.bgSecondary400 {
+    background-color: var(--clr-Secondary-400);
+}
+
+.textSecondary500 {
+    color: var(--clr-Secondary-500);
+}
+
+.bgSecondary500 {
+    background-color: var(--clr-Secondary-500);
+}
+
+.textNeutral100 {
+    color: var(--clr-Neutral-100);
+}
+
+.bgNeutral100 {
+    background-color: var(--clr-Neutral-100);
+}
+
+.textNeutral200 {
+    color: var(--clr-Neutral-200);
+}
+
+.bgNeutral200 {
+    background-color: var(--clr-Neutral-200);
+}
+
+.textNeutral300 {
+    color: var(--clr-Neutral-300);
+}
+
+.bgNeutral300 {
+    background-color: var(--clr-Neutral-300);
+}
+
+.textNeutral400 {
+    color: var(--clr-Neutral-400);
+}
+
+.bgNeutral400 {
+    background-color: var(--clr-Neutral-400);
+}
+
+.textNeutral500 {
+    color: var(--clr-Neutral-500);
+}
+
+.bgNeutral500 {
+    background-color: var(--clr-Neutral-500);
+}
+
+.textNeutral600 {
+    color: var(--clr-Neutral-600);
+}
+
+.bgNeutral600 {
+    background-color: var(--clr-Neutral-600);
+}
+
+.textNeutral700 {
+    color: var(--clr-Neutral-700);
+}
+
+.bgNeutral700 {
+    background-color: var(--clr-Neutral-700);
+}
+
+.textNeutral800 {
+    color: var(--clr-Neutral-800);
+}
+
+.bgNeutral800 {
+    background-color: var(--clr-Neutral-800);
+}
+
+.textNeutral900 {
+    color: var(--clr-Neutral-900);
+}
+
+.bgNeutral900 {
+    background-color: var(--clr-Neutral-900);
+}
+
+/* +Fonts size+ */
+.fs80 {
+    font-size: var(--fs-80);
+}
+
+.fs100 {
+    font-size: var(--fs-100);
+}
+
+.fs150 {
+    font-size: var(--fs-150);
+
+}
+
+.fs200 {
+    font-size: var(--fs-200);
+}
+
+.fs250 {
+    font-size: var(--fs-250);
+}
+
+.fs300 {
+    font-size: var(--fs-300);
+}
+
+/* +Font weight+ */
+.fw100 {
+    font-weight: var(--fwThin);
+}
+
+.fw200 {
+    font-weight: var(--fwRegular);
+}
+
+.fw300 {
+    font-weight: var(--fwSemiBold);
+}
+
+.fw400 {
+    font-weight: var(--fwBold);
+}
+
+
+/* Valeurs texte */
+.retourLigne {
+    word-break: break-word;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.textDecoNone {
+    text-decoration: none;
+}
+
+.textDecoUnder {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* width */
+.width100 {
+    width: 100%;
+}
+
+.width75 {
+    width: 650px;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width25 {
+    width: 25%;
+}
+
+/* overflow */
+
+.overFlow {
+    overflow: hidden;
+}
+
+/* +margin+ */
+.marginSmall {
+    margin: .5rem;
+}
+
+.marginNormal {
+    margin: 1rem;
+}
+
+.marginLarge {
+    margin: 2rem;
+}
+
+.marginBotS {
+    margin-bottom: 1rem;
+}
+
+.marginBotN {
+    margin-bottom: 2rem;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+/* +padding+ */
+.paddingSmall {
+    padding: .3rem;
+}
+
+.paddingNormal {
+    padding: 1rem;
+}
+
+.paddingLarge {
+    padding: 3rem;
+}
+
+.paddingTop {
+    padding-top: 1rem;
+}
+
+/* +positon+ */
+.absolute {
+    position: absolute;
+}
+
+/* +borders+ */
+.borderLeft {
+    border-left: 1px var(--clrBlack) solid;
+}
+
+/*
+============
+BLOCS 
+============
+*/
+
+h2 {
+    color: var(--clr-Secondary-300);
+    font-size: var(--fs-600);
+    margin: 2rem;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    background-color: var(--clr-Neutral-100);
+
+    cursor: pointer;
+    transition: 800ms;
+}
+
+.btn:hover {
+    background-color: var(--clr-Secondary-300);
+    color: var(--clr-Neutral-100);
+    border-radius: 15px;
+}
+
+/* 
+============
+COMPOSITION 
+============
+*/
+
+.displayBlock {
+    display: block;
+}
+
+/* +Flexbox+ */
+.displayFlex {
+    display: flex;
+}
+
+.gap {
+    gap: .5rem;
+}
+
+.gapLarge {
+    gap: 3rem;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+.alignEnd {
+    align-items: flex-end;
+}
+
+.alignSelfEnd {
+    align-self: end;
+}
+
+.alignSelfStart {
+    align-self: start;
+}
+
+.alignSelfCenter {
+    align-self: center;
+}

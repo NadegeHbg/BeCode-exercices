@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="centerText fs300 marginBotN">
+            Let's play with Date
+        </h1>
+
+        <section class="marginAuto displayFlex justifyCenter alignCenter gapLarge width50">
+
+            <div class="calendar displayFlex flexColumn alignCenter width25 overFlow">
+                <p id="dayInLetter" class="uppercase bgSecondary500 width100 centerText paddingSmall"></p>
+                <div class="bgNeutral100 width100 textPrimary500 centerText">
+                    <p id="dayInNumber"></p>
+                    <p id="month" class="uppercase"></p>
+                </div>
+                <p id="year" class="bgSecondary500 width100 centerText paddingSmall"></p>
+            </div>
+            <div class="displayFlex alignEnd">
+                <p id="hour"></p>
+                <p id="sec" class="fs100"></p>
+            </div>
+
+        </section>
+
+        <section class="displayFlex flexColumn gap marginNormal">
+            <h2 class="alignSelfCenter">
+                TimeZone of Anchorage, Reykjavik and Saint-Petersbourg
+            </h2>
+            <div>
+                <h3>Bruxelles</h3>
+                <p class="marginNormal" id="Bruxelles"></p>
+            </div>
+            <div>
+                <h3>Anchorage</h3>
+                <p class="marginNormal" id="Anchorage"></p>
+            </div>
+            <div>
+                <h3>Reykjavik</h3>
+                <p class="marginNormal" id="Reykjavik"></p>
+            </div>
+            <div>
+                <h3>Saint-Petersbourg</h3>
+                <p class="marginNormal" id="Saint-Petersbourg"></p>
+            </div>
+        </section>
+
+        <section class="displayFlex flexColumn gap marginNormal">
+            <h2 class="alignSelfCenter">Days since birth</h2>
+            <div>
+                <h3>Date of Birth</h3>
+                <p class="marginNormal" id="dateOfBirth"></p>
+            </div>
+        </section>
+
+        <section class="displayFlex flexColumn gap marginNormal">
+            <h2 class="alignSelfCenter">When will we be ...</h2>
+            <div>
+                <h3>... In 80.000 hours ? </h3>
+                <p class="marginNormal" id="inALongTime"></p>
+            </div>
+            <div>
+                <h3>... In whatever you choose hours ?</h3>
+                <input class="marginNormal" type="number" name="" id="numberFromUser" placeholder="Enter a number"
+                    step="1">
+                <p class="marginNormal" id="result"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

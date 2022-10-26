@@ -62,34 +62,50 @@ console.log("it's connected")
 
 // =====================================================
 // Whack a mole
-// every X secondes, one of the circle change color
 // =====================================================
 
-const circles = document.getElementsByClassName('cercle')
+const circles = document.querySelectorAll('.cercle')
 // console.log(circles)
 const score = document.getElementById('score')
 let scoreTotal = 0
+const btnStart = document.getElementById('btnStart')
 
 // get a random circle
 
+// console.log(circles)
+
 const randomCircle = () => {
-    const circle = circles[Math.floor(Math.random() * circles.length)]
-    // console.log(circle)
-    circle.classList.toggle("redCircle") /*toggle uniquement si le cercle random est rechoisi => sur la bonne voie, mais à modifier*/
+    circles.forEach(circle => {
+        // console.log(circle)
+        circle.classList.remove('redCircle')
 
-    circle.addEventListener('click', () => {
-        if (circle.classList.contains("redCircle")) {
-            circle.classList.toggle("redCircle")
-            scoreTotal++
-            score.innerHTML = `${scoreTotal}`
-        } else {
-            scoreTotal--
-            score.innerHTML = `${scoreTotal}`
-
-        }
-        // => if is working because clicking on the random circle but else is not because the others circles aren't selected in this case ... So it's needed to put the add event listener outside of the function. Set the addEventListener on the HTML collection ... 
-    })
+    });
+    const pickRandomCircle = circles[Math.floor(Math.random() * circles.length)]
+    // console.log(pickRandomCircle)
+    pickRandomCircle.classList.add('redCircle')
 }
 
+const intervalCircle = () => {
+    setInterval(randomCircle, 2000)
+}
 
-setInterval(randomCircle, 2000)
+circles.forEach(circle => {
+    circle.addEventListener('click', () => {
+        if (circle.classList.contains('redCircle')) {
+            scoreTotal++
+            // console.log(scoreTotal)
+            score.innerHTML = `${scoreTotal}`
+            circle.classList.remove('redCircle')
+        }
+        else {
+            scoreTotal--
+            score.innerHTML = `${scoreTotal}`
+        }
+    })
+});
+
+
+
+btnStart.addEventListener('click', () => {
+    intervalCircle()
+}, { once: true })

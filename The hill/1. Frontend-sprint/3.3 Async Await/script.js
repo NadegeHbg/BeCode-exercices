@@ -21,13 +21,22 @@ const createDiv = (nameToCheck, json) => {
     main.insertAdjacentElement("beforeend", newDiv);
 }
 
+const getStuffsFromAPI = async (nameToCheck, countryToCheck) => {
+    let response = await fetch('https://api.agify.io/?name=' + nameToCheck + '&country_id=' + countryToCheck)
+    // console.log(response)
+    let stuffFromAPI = await response.json();
+    // console.log(stuffFromAPI)
+    // return stuffFromAPI
+    createDiv(nameToCheck, stuffFromAPI)
+    localStorage.setItem(`research_${nameToCheck}_${countryToCheck}`, JSON.stringify(stuffFromAPI));
+}
+
 btnFetch.addEventListener('click', () => {
 
-    const nameToCheck = nameFromUser.value;
+    const nameToCheck = nameFromUser.value.toLowerCase();
     // console.log(nameToCheck);
     const countryToCheck = countryFromUser.value;
 
-    const fetchName = (name, country) => fetch('https://api.agify.io/?name=' + name + '&country_id=' + country)
     const nameResearched = localStorage.getItem(`research_${nameToCheck}_${countryToCheck}`)
 
     if (nameResearched != null) {
@@ -37,20 +46,7 @@ btnFetch.addEventListener('click', () => {
         createDiv(nameToCheck, json)
     } else {
         console.log('fetch from api')
-        fetchName(nameToCheck, countryToCheck)
-            .then(response => response.json())
+        getStuffsFromAPI(nameToCheck, countryToCheck)
 
-            .then(json => {
-                console.log(json)
-                console.log(typeof json)
-                createDiv(nameToCheck, json)
-
-                localStorage.setItem(`research_${nameToCheck}_${countryToCheck}`, JSON.stringify(json));
-                // console.log(typeof JSON.stringify(json))
-                // console.log(JSON.stringify(json))
-            })
-            .catch(error => {
-                console.log('There was an error!', error)
-            })
     }
 })

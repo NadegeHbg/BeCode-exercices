@@ -6,6 +6,20 @@ const nameFromUser = document.querySelector('#nameFromUser')
 const countryFromUser = document.querySelector('#countryFromUser')
 // console.table(countryFromUser)
 
+const createDiv = (nameToCheck, json) => {
+    const newDiv = document.createElement('div');
+    const subtitle = document.createElement('h2');
+    const paragrapheOne = document.createElement('p');
+    const paragrapheTwo = document.createElement('p');
+    const paragrapheThree = document.createElement('p');
+
+    subtitle.innerText = nameToCheck;
+    subtitle.classList.add('capitalize');
+    paragrapheOne.innerText = `Age : ${json.age}`;
+    paragrapheTwo.innerText = `Number of ${nameToCheck} taken into account : ${json.count}`;
+    newDiv.append(subtitle, paragrapheOne, paragrapheTwo, paragrapheThree);
+    main.insertAdjacentElement("beforeend", newDiv);
+}
 
 btnFetch.addEventListener('click', () => {
 
@@ -14,25 +28,37 @@ btnFetch.addEventListener('click', () => {
     const countryToCheck = countryFromUser.value;
 
     const fetchName = (name, country) => fetch('https://api.agify.io/?name=' + name + '&country_id=' + country)
+    const nameResearched = localStorage.getItem(`research_${nameToCheck}_${countryToCheck}`)
 
-    fetchName(nameToCheck, countryToCheck)
-        .then(response => response.json())
-        .then(json => {
-            // console.log(json.age);
-            // console.log(json.count);
-            // console.table(json);
+    if (nameResearched != null) {
+        console.log(nameResearched)
+        let json = JSON.parse(nameResearched)
+        createDiv(nameToCheck, json)
+    } else {
+        console.log('fetch from api')
+        fetchName(nameToCheck, countryToCheck)
+            .then(response => response.json())
+            .then(json => {
+                createDiv(nameToCheck, json)
+                // console.log(json.age);
+                // console.log(json.count);
+                // console.table(json);
 
-            const newDiv = document.createElement('div');
-            const subtitle = document.createElement('h2');
-            const paragrapheOne = document.createElement('p');
-            const paragrapheTwo = document.createElement('p');
-            const paragrapheThree = document.createElement('p');
+                // const newDiv = document.createElement('div');
+                // const subtitle = document.createElement('h2');
+                // const paragrapheOne = document.createElement('p');
+                // const paragrapheTwo = document.createElement('p');
+                // const paragrapheThree = document.createElement('p');
 
-            subtitle.innerText = nameToCheck;
-            subtitle.classList.add('capitalize');
-            paragrapheOne.innerText = `Age : ${json.age}`;
-            paragrapheTwo.innerText = `Number of ${nameToCheck} taken into account : ${json.count}`;
-            newDiv.append(subtitle, paragrapheOne, paragrapheTwo, paragrapheThree);
-            main.insertAdjacentElement("beforeend", newDiv);
-        })
+                // subtitle.innerText = nameToCheck;
+                // subtitle.classList.add('capitalize');
+                // paragrapheOne.innerText = `Age : ${json.age}`;
+                // paragrapheTwo.innerText = `Number of ${nameToCheck} taken into account : ${json.count}`;
+                // newDiv.append(subtitle, paragrapheOne, paragrapheTwo, paragrapheThree);
+                // main.insertAdjacentElement("beforeend", newDiv);
+
+                localStorage.setItem(`research_${nameToCheck}_${countryToCheck}`, JSON.stringify(json));
+            })
+    }
 })
+

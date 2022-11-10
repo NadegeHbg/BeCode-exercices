@@ -1,0 +1,14 @@
+body {
+  background-color: #4281b8b3;
+}
+
+main {
+  flex-direction: column;
+  display: flex;
+}
+
+h1 {
+  align-self: center;
+}
+
+/*# sourceMappingURL=index.7a75a0e3.css.map */

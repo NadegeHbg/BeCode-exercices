@@ -1,0 +1,71 @@
+/* ===Gap=== */
+.gapSmall {
+    gap: .5rem;
+}
+
+.gapMedium {
+    gap: 1rem;
+}
+
+.gapLarge {
+    gap: 2rem;
+}
+
+/* ===Flex classes=== */
+
+.displayFlex {
+    display: flex;
+}
+
+.displayFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/*justify-content*/
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+/*align-content*/
+
+.alignCenter {
+    align-items: center;
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+.alignEnd {
+    align-items: flex-end;
+}
+
+/*align-self*/
+.alignSelfCenter {
+    align-self: center;
+}
+
+.alignSelfEnd {
+    align-self: flex-end;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}

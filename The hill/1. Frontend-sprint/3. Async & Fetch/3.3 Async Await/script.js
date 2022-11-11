@@ -30,23 +30,22 @@ const getStuffsFromAPI = async (nameToCheck, countryToCheck) => {
     createDiv(nameToCheck, stuffFromAPI)
     localStorage.setItem(`research_${nameToCheck}_${countryToCheck}`, JSON.stringify(stuffFromAPI));
 }
++
+    btnFetch.addEventListener('click', () => {
 
-btnFetch.addEventListener('click', () => {
+        const nameToCheck = nameFromUser.value.toLowerCase();
+        // console.log(nameToCheck);
+        const countryToCheck = countryFromUser.value;
 
-    const nameToCheck = nameFromUser.value.toLowerCase();
-    // console.log(nameToCheck);
-    const countryToCheck = countryFromUser.value;
+        const nameResearched = localStorage.getItem(`research_${nameToCheck}_${countryToCheck}`)
 
-    const nameResearched = localStorage.getItem(`research_${nameToCheck}_${countryToCheck}`)
-
-    if (nameResearched != null) {
-        // console.log(nameResearched)
-        let json = JSON.parse(nameResearched)
-        // console.log(json)
-        createDiv(nameToCheck, json)
-    } else {
-        console.log('fetch from api')
-        getStuffsFromAPI(nameToCheck, countryToCheck)
-
-    }
-})
+        if (nameResearched != null) {
+            // console.log(nameResearched)
+            let json = JSON.parse(nameResearched)
+            // console.log(json)
+            createDiv(nameToCheck, json)
+        } else {
+            console.log('fetch from api')
+            getStuffsFromAPI(nameToCheck, countryToCheck)
+        }
+    })

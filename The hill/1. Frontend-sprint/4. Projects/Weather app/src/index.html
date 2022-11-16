@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Way There</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- JS -->
+    <script type="module" src="./JS/index.js"></script>
+</head>
+
+<body>
+    <header class="displayFlexColumn">
+        <!-- reste dans le dom-->
+        <h1>The Way There</h1>
+        <p class="centerText">Here you can check the weather of two different cities and compare them
+            <br>
+            Be always ready wherever you go !
+        </p>
+    </header>
+
+    <main>
+        <form class="paddingNormal container" id="form">
+            <!-- reste dans le dom-->
+            <div class="titleOne displayFlexColumn ">
+                <h3>First City</h3>
+            </div>
+            <div class="titleTwo displayFlexColumn">
+                <h3>Second City</h3>
+            </div>
+            <div class="inputOne displayFlexColumn">
+                <input type="text" name="inputCityOne" id="cityOne" placeholder="Enter your city here">
+            </div>
+            <div class="inputTwo displayFlexColumn">
+                <input type="text" name="inputCityTwo" id="cityTwo" placeholder="Enter your city here">
+            </div>
+            <div class="submit">
+                <input class="btnSubmit" type="submit" value="submit">
+            </div>
+        </form>
+
+        <section id="sectionCityOne" class="width100 paddingNormal cardContainer">
+            <!-- reste dans le dom-->
+
+            <!-- <h2 class="centerText displayFlexColumn">Bruxelles</h2> -->
+            <!-- <div class="weatherWeek displayFlex">
+                <div class="weatherCardDay displayFlexColumn">
+                    <h3>Monday</h3>
+                    <div>
+                        <i></i>
+                    </div>
+                    <div class="displayFlexColumn">
+                        <h4>Real temp</h4>
+                        <p>15°C</p>
+                    </div>
+                    <div class="displayFlexColumn">
+                        <h4>Feel like</h4>
+                        <p>8°C</p>
+                    </div>
+                    <div>
+                        <h4>Sunshine</h4>
+                        <div class="displayFlex">
+                            <p>6h</p>
+                            <p>21h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weatherCardDay displayFlexColumn">
+                    <h3>Monday</h3>
+                    <div>
+                        <i></i>
+                    </div>
+                    <div>
+                        <div class="displayFlexColumn">
+                            <h4>Real temp</h4>
+                            <p>15°C</p>
+                        </div>
+                        <div class="displayFlexColumn">
+                            <h4>Feel like</h4>
+                            <p>8°C</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Ensoleillement</h4>
+                        <div class="displayFlex">
+                            <p>6h</p>
+                            <p>21h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weatherCardDay displayFlexColumn">
+                    <h3>Monday</h3>
+                    <div>
+                        <i></i>
+                    </div>
+                    <div>
+                        <div class="displayFlexColumn">
+                            <h4>Real temp</h4>
+                            <p>15°C</p>
+                        </div>
+                        <div class="displayFlexColumn">
+                            <h4>Feel like</h4>
+                            <p>8°C</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Ensoleillement</h4>
+                        <div class="displayFlex">
+                            <p>6h</p>
+                            <p>21h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weatherCardDay displayFlexColumn">
+                    <h3>Monday</h3>
+                    <div>
+                        <i></i>
+                    </div>
+                    <div>
+                        <div class="displayFlexColumn">
+                            <h4>Real temp</h4>
+                            <p>15°C</p>
+                        </div>
+                        <div class="displayFlexColumn">
+                            <h4>Feel like</h4>
+                            <p>8°C</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Ensoleillement</h4>
+                        <div class="displayFlex">
+                            <p>6h</p>
+                            <p>21h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weatherCardDay displayFlexColumn">
+                    <h3>Monday</h3>
+                    <div>
+                        <i></i>
+                    </div>
+                    <div>
+                        <div class="displayFlexColumn">
+                            <h4>Real temp</h4>
+                            <p>15°C</p>
+                        </div>
+                        <div class="displayFlexColumn">
+                            <h4>Feel like</h4>
+                            <p>8°C</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Ensoleillement</h4>
+                        <div class="displayFlex">
+                            <p>6h</p>
+                            <p>21h</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <section id="sectionCityTwo" class="width100 paddingNormal cardContainer">
+
+        </section>
+        <section id="compare">
+            <canvas id="comparison"></canvas>
+        </section>
+    </main>
+</body>
+
+</html>

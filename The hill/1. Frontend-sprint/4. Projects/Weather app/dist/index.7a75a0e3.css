@@ -1,0 +1,196 @@
+:root {
+  --section-spacing: 3.5rem;
+  --clr-Primary-100: #d8e3f3;
+  --clr-Primary-500: #1b293b;
+  --clr-Secondary-100: #ff8f66;
+  --clr-Neutral-100: #fff;
+  --clr-Neutral-900: #262626;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  background-color: var(--clr-Primary-500);
+  color: var(--clr-Neutral-100);
+  font-family: Josefin Sans, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *, :before, :after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.bgPrimary100 {
+  background-color: var(--clr-Primary-100);
+}
+
+.textNeutral100 {
+  color: var(--clr-Neutral-100);
+}
+
+.bgNeutral100 {
+  background-color: var(--clr-Neutral-100);
+}
+
+.textNeutral900 {
+  color: var(--clr-Neutral-900);
+}
+
+.bgNeutral900 {
+  background-color: var(--clr-Neutral-900);
+}
+
+.paddingNormal {
+  padding: 1rem;
+}
+
+.marginNormal {
+  margin: 1rem;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+header {
+  min-height: 200px;
+}
+
+#compare {
+  width: 100%;
+}
+
+h1 {
+  background-color: #3b5981cc;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  padding: 1rem 5rem;
+}
+
+h2 {
+  min-height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+form {
+  height: 65px;
+}
+
+input {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.btnSubmit {
+  min-width: 100px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btnSubmit:hover {
+  color: var(--clr-Neutral-100);
+  background-color: var(--clr-Secondary-100);
+}
+
+.weatherWeek {
+  color: var(--clr-Primary-500);
+  background-color: #f5f5f5;
+  border-radius: 0 0 25px 25px;
+  padding: 1rem;
+}
+
+.displayFlex {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.displayFlexColumn {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.container {
+  grid-template: "titleOne titleTwo . ." 1fr
+                 "inputOne inputTwo submit ." 1fr
+                 / .5fr .5fr 1fr 4fr;
+  grid-auto-flow: row;
+  gap: 0;
+  display: grid;
+}
+
+.inputTwo {
+  grid-area: inputTwo;
+}
+
+.inputOne {
+  grid-area: inputOne;
+}
+
+.titleOne {
+  grid-area: titleOne;
+}
+
+.titleTwo {
+  grid-area: titleTwo;
+}
+
+.submit {
+  grid-area: submit;
+}
+
+/*# sourceMappingURL=index.7a75a0e3.css.map */

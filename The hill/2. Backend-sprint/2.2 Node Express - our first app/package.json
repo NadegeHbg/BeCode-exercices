@@ -1,0 +1,17 @@
+{
+  "name": "2.2-node-express---our-first-app",
+  "version": "1.0.0",
+  "description": "Exercise about node and postgresql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "igotyb",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

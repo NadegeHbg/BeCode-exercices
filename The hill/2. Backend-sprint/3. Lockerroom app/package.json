@@ -1,0 +1,19 @@
+{
+  "name": "3.-lockerroom-app",
+  "version": "1.0.0",
+  "description": "creation of a plateform for teams to exchange informations",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "nodemon index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "igotyb",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0"
+  }
+}

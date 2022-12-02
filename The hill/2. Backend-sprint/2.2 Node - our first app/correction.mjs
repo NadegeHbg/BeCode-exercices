@@ -9,7 +9,7 @@ const client = new Client({
     user: 'userdb',
     host: 'localhost',
     database: 'users',
-    password: process.env.PASSWD,
+    password: process.env.DBPASSWORD,
     port: 5432,
 })
 

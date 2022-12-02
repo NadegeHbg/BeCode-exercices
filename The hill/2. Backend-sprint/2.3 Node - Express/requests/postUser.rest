@@ -1,0 +1,10 @@
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "id": 151,
+    "firstName": "Boubou",
+    "lastName": "Choupi",
+    "email": "BoubouChoupi3@nyu.edu",
+    "ip": "121.121.121.21"
+}

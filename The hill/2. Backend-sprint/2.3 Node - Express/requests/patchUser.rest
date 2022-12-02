@@ -1,0 +1,10 @@
+PATCH  http://localhost:3000/user/51
+Content-Type: application/json
+
+{
+    "id": 151,
+    "firstName": "Boubou",
+    "lastName": "Choupi",
+    "email": "BoubouChoupi3@nyu.edu",
+    "ip": "121.121.121.21"
+}

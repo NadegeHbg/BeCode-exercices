@@ -1,4 +1,4 @@
-import client from "../db/client.mjs";
+import client from "../../db/client.mjs";
 
 const getLobbies = async (req, res) => {
     try {

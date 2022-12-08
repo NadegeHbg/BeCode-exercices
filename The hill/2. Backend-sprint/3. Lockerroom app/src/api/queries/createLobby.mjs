@@ -8,7 +8,9 @@ import client from "../db/client.mjs";
 // app.post('/lobby/:id', getLobbies)
 
 const createLobby = async (req, res) => {
-
+    const lobby = await client.query(
+        "INSERT INTO lobby (title, profile_id) VALUES ( $1, $2 ) RETURNING *;",
+        [email, /*on pourra mettre le token qui proviendra de jwt*/]);
 
     client.query()
 }

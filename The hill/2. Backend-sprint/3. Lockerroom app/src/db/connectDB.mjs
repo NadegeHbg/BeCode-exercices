@@ -1,8 +1,8 @@
-import client from "./client.mjs";
+import pool from "./client.mjs";
 
 const connectDB = async () => {
     try {
-        await client.connect();
+        await pool.connect();
         console.log('connexion successful')
     } catch (err) {
         console.log(`connexion failed ${err}`)

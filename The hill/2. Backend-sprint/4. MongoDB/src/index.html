@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFace</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JS -->
+
+
+</head>
+
+<!-- Page d'accueil 
+        * si pas connecté, pop up qui demande une connexion au clic sur un profil
+        * si connecté, peut accéder aux différents profils
+
+     Pour se connecter : 
+        * si pas connecté + clic sur un profil : propoer de se connecter
+        * cliquer sur l'icône en haut à droite ->] 
+
+            # ouvrir une page qui demande une adresse mail et un mot de passe
+            # email && mot de passe ok -> redirigé vers home pas
+            # email || mot de passe !ok -> affichage erreur + try again
+-->
+<!-- Media Query 
+        * en dessous de 450px de largeur, passer le tout en une seule colone
+
+ -->
+
+<body>
+    <header class="paddingNormal displayFlex justifyBetween alignCenter">
+        <nav>
+            <ul class="displayFlex" role='list'>
+                <li class="marginRight">
+                    <i class="fa-solid fa-house"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="displayFlex" role='list'>
+                <li>
+                    <i class="fa-solid fa-book"></i>
+                </li>
+                <li class="marginLeft">
+                    <a href=""><i class="fa-solid fa-right-to-bracket"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- main un peu fictif avec proposition de 6 profils fictifs -->
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">Laurent</h2>
+                <h2>Gérard</h2>
+            </div>
+        </a>
+
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">France</h2>
+                <h2>Gall</h2>
+            </div>
+        </a>
+
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">Robin</h2>
+                <h2>des Bois</h2>
+
+
+            </div>
+        </a>
+
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">Toy</h2>
+                <h2>Story</h2>
+
+
+            </div>
+        </a>
+
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">Géplu</h2>
+                <h2>Didée</h2>
+            </div>
+        </a>
+
+        <a href="#" class="profileCard ">
+            <div class="displayFlex flexColumn justifyCenter alignCenter">
+                <div class="profilePic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+                <h2 class="paddingTop">Encore</h2>
+                <h2>un Nom</h2>
+            </div>
+        </a>
+    </main>
+</body>
+
+</html>

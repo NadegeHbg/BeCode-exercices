@@ -1,30 +1,38 @@
 import express from "express";
 import connectDB from "./db/connectDB.mjs";
 import getUsers from "./api/queries/getUsers.mjs";
-import addUser from "./api/auth/registerUser.mjs";
+import registerUser from "./api/auth/registerUser.mjs";
 import getLobbies from "./api/queries/getLobbies.mjs";
 import loginUser from "./api/auth/loginUser.mjs";
 import createLobby from "./api/queries/createLobby.mjs";
+import * as dotenv from 'dotenv';
+import sendMessage from "./api/queries/sendMessage.mjs";
 
-const app = express();
+dotenv.config();
+
+const server = express();
 const PORT = 3000;
 
 connectDB();
 
-app.use(express.json());
+server.use(express.json());
 
-app.get('/', (req, resp) => {
-    resp.send({ info: 'Speak with your team' })
+server.get('/', (req, resp) => {
+    resp.send({ info: 'Coucou le tchat, toutes mes confuses' })
 })
 
-app.get('/users', getUsers);
+server.post('/api/register', registerUser);
 
-app.post('/api/register', addUser);
+server.post('/api/login/', loginUser);
 
-app.post('/api/login/', loginUser);
+server.post('/api/lobby', createLobby);
 
-app.get('/lobbies', getLobbies)
+server.post('/api/lobby/message', sendMessage)
+
+server.get('/users', getUsers);
+
+server.get('/lobbies', getLobbies)
 
 app.post('/lobby', createLobby)
 
-app.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}/`))
+server.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}/`))

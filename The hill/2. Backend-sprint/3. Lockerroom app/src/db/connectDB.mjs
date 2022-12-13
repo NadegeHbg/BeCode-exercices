@@ -1,4 +1,4 @@
-import client from "./client.mjs";
+import pool from "./client.mjs";
 
 const connectDB = async () => {
     try {

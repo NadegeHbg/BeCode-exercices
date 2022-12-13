@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv'
 dotenv.config();
 // console.log(process.env.lockerPW)
 
-const client = new pkg.Client({
+const pool = new pkg.Pool({
     user: 'adminlr',
     host: 'localhost',
     database: 'locker_room',
@@ -12,4 +12,4 @@ const client = new pkg.Client({
     port: 5432,
 })
 
-export default client;
+export default pool;

@@ -7,7 +7,7 @@ dotenv.config();
 
 const loginUser = async (req, res) => {
     try {
-        const user = await client.query(`SELECT email, password FROM users WHERE email = $1`, [req.body.email]);
+        const user = await client.query(`SELECT * FROM users WHERE email = $1`, [req.body.email]);
         // console.log(req.body.email, user.rows)
         // console.log(req.body.password, user.rows[0].password)
         if (user.rows.length === 0) {
@@ -22,8 +22,12 @@ const loginUser = async (req, res) => {
             return
         }
 
+        // console.log(typeof user.rows[0].id)
+
         // res.send(`You're now connected`)
-        const token = jwt.sign({ userd_id: 10 }, process.env.privateKeyAuten);
+        console.log(req.headers)
+        // user.rows[0].id is a Number
+        const token = jwt.sign({ userd_id: user.rows[0].id }, process.env.privateKeyAuten);
         const tokito = {
             tokenKey: token
         }

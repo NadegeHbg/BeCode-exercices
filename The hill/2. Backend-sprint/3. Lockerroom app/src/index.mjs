@@ -4,7 +4,7 @@ import getUsers from "./api/queries/getUsers.mjs";
 import addUser from "./api/auth/registerUser.mjs";
 import getLobbies from "./api/queries/getLobbies.mjs";
 import loginUser from "./api/auth/loginUser.mjs";
-// import createLobby from "./queries/createLobby.mjs";
+import createLobby from "./api/queries/createLobby.mjs";
 
 const app = express();
 const PORT = 3000;
@@ -25,6 +25,6 @@ app.post('/api/login/', loginUser);
 
 app.get('/lobbies', getLobbies)
 
-// app.post('/lobby', createLobby)
+app.post('/lobby', createLobby)
 
 app.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}/`))

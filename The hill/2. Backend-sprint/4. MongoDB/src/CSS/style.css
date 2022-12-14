@@ -67,7 +67,7 @@ body {
     height: 100%;
     font-family: 'Mali', cursive;
     background-color: var(--clr-Neutral-100);
-    color: var(--clr-Neutral-100);
+    color: var(--clr-Primary-500);
 }
 
 /* Set core body defaults */
@@ -417,6 +417,18 @@ svg {
 BLOCS 
 ============
 */
+.btn {
+    padding: 1rem;
+    min-width: 75px;
+    aspect-ratio: 16/3;
+
+    border-radius: 25px;
+    background-color: var(--clr-Primary-500);
+    color: var(--clr-Neutral-100);
+
+    cursor: pointer;
+}
+
 header {
     background-color: var(--clr-Primary-300);
     min-height: 75px;

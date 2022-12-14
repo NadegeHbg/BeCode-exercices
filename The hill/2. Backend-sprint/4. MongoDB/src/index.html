@@ -60,6 +60,40 @@
     </header>
 
     <main>
+        <section class="hidden signBox">
+            <button id="login" class="btn">log in</button>
+            <button id="signin" class="btn">sign in</button>
+        </section>
+
+        <section class="displayNone loginBox">
+            <form action="/" method="POST">
+                <div>
+                    <h3>Email</h3>
+                    <input type="text" name="emailLog" id="emailLog" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <h3>Password</h3>
+                    <input type="password" name="passwordLog" id="passwordLog"
+                        placeholder="Enter your password address">
+                </div>
+                <input type="submit" value="submit" class="btn">
+            </form>
+        </section>
+
+        <section class="displayNone signinBox">
+            <form action="/" method="POST">
+                <div>
+                    <h3>Email</h3>
+                    <input type="text" name="emailSign" id="emailSign" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <h3>Password</h3>
+                    <input type="password" name="passwordSign" id="passwordSign"
+                        placeholder="Enter your password address">
+                </div>
+                <input type="submit" value="submit" class="btn">
+            </form>
+        </section>
         <!-- main un peu fictif avec proposition de 6 profils fictifs -->
         <a href="#" class="profileCard ">
             <div class="displayFlex flexColumn justifyCenter alignCenter">

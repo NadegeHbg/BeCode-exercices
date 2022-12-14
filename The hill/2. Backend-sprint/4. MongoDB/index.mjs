@@ -1,25 +1,28 @@
 import express from "express";
 import connectDB from "./src/db/connectDB.mjs";
+import registerUser from "./src/api/auth/register.mjs";
 
-import user from "./src/models/user.mjs";
 
+import Profile from "./src/models/profile.mjs";
+import loginUser from "./src/api/auth/login.mjs";
 
 const server = express();
 const PORT = 3000;
 
-await connectDB();
+connectDB();
 
 server.use("/static", express.static("src"));
 
+// extract data from the form by adding them to the body property of the request
 server.use(express.urlencoded({ extended: true }));
-
-server.post('/', (req, res) => {
-    console.log(req.body);
-});
-
 
 server.get('/', (req, res) => {
     res.send({ info: 'Hello World !' })
 })
 
-server.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}/`));
+// register new user
+server.post('/static/register', registerUser);
+
+server.post('/static/login', loginUser)
+
+server.listen(PORT, () => console.log(`http://localhost:${PORT}/`))

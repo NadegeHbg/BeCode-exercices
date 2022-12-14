@@ -66,7 +66,7 @@
         </section>
 
         <section class="displayNone loginBox">
-            <form action="/" method="POST">
+            <form action="/static/login" method="POST">
                 <div>
                     <h3>Email</h3>
                     <input type="text" name="emailLog" id="emailLog" placeholder="Enter your email address">
@@ -76,12 +76,12 @@
                     <input type="password" name="passwordLog" id="passwordLog"
                         placeholder="Enter your password address">
                 </div>
-                <input type="submit" value="submit" class="btn">
+                <input type="submit" value="submit" class="btn" id="btnLog">
             </form>
         </section>
 
         <section class="displayNone signinBox">
-            <form action="/" method="POST">
+            <form action="/static/register" method="POST">
                 <div>
                     <h3>Email</h3>
                     <input type="text" name="emailSign" id="emailSign" placeholder="Enter your email address">
@@ -91,11 +91,11 @@
                     <input type="password" name="passwordSign" id="passwordSign"
                         placeholder="Enter your password address">
                 </div>
-                <input type="submit" value="submit" class="btn">
+                <input type="submit" value="submit" class="btn" id="btnSign">
             </form>
         </section>
         <!-- main un peu fictif avec proposition de 6 profils fictifs -->
-        <a href="#" class="profileCard ">
+        <a href=" #" class="profileCard ">
             <div class="displayFlex flexColumn justifyCenter alignCenter">
                 <div class="profilePic">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

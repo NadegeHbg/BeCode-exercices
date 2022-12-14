@@ -2,8 +2,6 @@ import client from "../../db/client.mjs";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
 import { promisify } from 'util';
-import { cp } from "fs";
-
 
 const sign = promisify(jwt.sign)
 

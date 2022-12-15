@@ -11,6 +11,8 @@ const PORT = 3000;
 
 connectDB();
 
+console.log(process.env.mongoDBpsw2)
+
 server.use("/static", express.static("src"));
 
 // extract data from the form by adding them to the body property of the request

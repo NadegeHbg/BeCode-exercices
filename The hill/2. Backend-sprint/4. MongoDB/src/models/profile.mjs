@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { isObjectIdOrHexString, Schema } from "mongoose";
 
 const schema = mongoose.Schema
 
@@ -11,6 +11,14 @@ const profileSchema = new schema({
         required: true
     },
     last_name: {
+        type: String,
+        required: true
+    },
+    creation_date: {
+        type: Date,
+        default: Date.now
+    },
+    id_user: {
         type: String,
         required: true
     }

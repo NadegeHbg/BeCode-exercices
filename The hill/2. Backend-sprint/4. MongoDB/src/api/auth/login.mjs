@@ -1,7 +1,9 @@
 import User from "../../models/user.mjs";
 import bcrypt from "bcrypt";
-// import jwt from 'jsonwebtoken';
-// import { promisify } from 'util';
+import jwt from 'jsonwebtoken';
+import { promisify } from 'util';
+
+const sign = promisify(jwt.sign)
 
 const loginUser = async (req, res) => {
     const { emailLog, passwordLog } = req.body;
@@ -16,6 +18,8 @@ const loginUser = async (req, res) => {
     if (!match) {
         return res.status(403).send({ error: 'Wrong password' })
     }
+
+    // const profile = await ;
 
     try {
         res.send('Connexion successful')

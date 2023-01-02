@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-
 // console.log(process.env.mongoDBpsw4)
 
 mongoose.set('strictQuery', true);

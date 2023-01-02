@@ -1,17 +1,16 @@
 import express from "express";
-import connectDB from "./src/db/connectDB.mjs";
-import registerUser from "./src/api/auth/register.mjs";
-
-
-import Profile from "./src/models/profile.mjs";
-import loginUser from "./src/api/auth/login.mjs";
+// database connexion
+import connectDB from "./db/connectDB.mjs"
+// user auth 
+import registerUser from "./api/auth/register.mjs";
+import loginUser from "./api/auth/login.mjs";
 
 const server = express();
 const PORT = 3000;
 
 connectDB();
 
-console.log(process.env.mongoDBpsw2)
+// console.log(process.env.mongoDBpsw2)
 
 server.use("/static", express.static("src"));
 

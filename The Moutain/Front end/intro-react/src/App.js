@@ -1,5 +1,6 @@
 
 import './App.css';
+import React, { useState } from 'react';
 
 const Title = () => {
   return <h1 className='App-Title'>My Todo App</h1>;
@@ -19,20 +20,39 @@ const SubTitle = () => {
   return <h2>Todos</h2>
 }
 
-const TodosList = () => {
+const ToDoList = () => {
+  const initialTodos = [{ task: "My first todo", checked: false }, { task: "Forgot this one", checked: false }, { task: "My second todo", checked: false }, { task: "One more", checked: false },];
+  const [todos, setTodos] = useState(initialTodos);
+
+  const handleCheckboxChange = (index) => {
+    setTodos(
+      todos.map((todo, i) => {
+        if (i === index) {
+          return {
+            ...todo,
+            checked: !todo.checked
+          };
+        }
+        return todo;
+      })
+    );
+  };
+
   return (
-    <div className='displayFlex alignStart'>
-      <label>
-        <input type='checkbox' />
-        <span>Be awesome</span>
-      </label>
-      <label>
-        <input type='checkbox' />
-        <span>Learn react</span>
-      </label>
-    </div>
-  )
+    <ul>
+      {initialTodos.map((todo, index) => (
+        <li key={index}>
+          <input
+            type="checkbox"
+            checked={todo.checked}
+            onChange={() => handleCheckboxChange(index)}
+          /> {todo.task}
+        </li>
+      ))}
+    </ul>
+  );
 }
+
 
 function App() {
   return (
@@ -44,8 +64,7 @@ function App() {
       <main className="App-body">
         <Form />
         <SubTitle />
-        <TodosList />
-
+        <ToDoList />
       </main>
     </div>
   );

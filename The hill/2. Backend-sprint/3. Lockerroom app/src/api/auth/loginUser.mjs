@@ -10,10 +10,10 @@ const loginUser = async (req, res) => {
     const user = await client.query(`SELECT * FROM users WHERE email = $1`, [req.body.email]);
     // console.log(req.body.email, user.rows)
     // console.log(req.body.password, user.rows[0].password)
-    if (user.rows.length === 0) {
-        res.send(`Incorrect email`)
-        return
-    }
+    // if (user.rows.length === 0) {
+    //     res.send(`Incorrect email`)
+    //     return
+    // }
 
     const { email, password } = req.body;
 

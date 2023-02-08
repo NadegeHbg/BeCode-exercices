@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;AAIA;;;;;AAKA","sources":["src/CSS/style.css"],"sourcesContent":["body {\n    background-color: rgba(66, 129, 184, 0.7);\n}\n\nmain {\n    display: flex;\n    flex-direction: column;\n}\n\nh1 {\n    align-self: center;\n}"],"names":[],"version":3,"file":"index.7a75a0e3.css.map","sourceRoot":"/__parcel_source_root/"}
